@@ -29,9 +29,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             </div>
             <!-- Article -->
             <div>
-                <div class="font-mono text-sm pb-4">
+                <div class="font-mono pb-4">
                   <h1>{title}</h1>
-                <p>{description}</p>
+                <p class="text-sm">{description}</p>
                 <div class="text-xs flex gap-x-4">
                   <div>Published: <FormattedDate date={pubDate} /></div>
                   {
@@ -66,7 +66,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     @apply py-2;
   }
   ul {
-    @apply list-disc list-outside p-2 ms-8;
+    @apply list-disc list-outside p-2 ms-8 text-lg;
   }
   blockquote {
     @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
