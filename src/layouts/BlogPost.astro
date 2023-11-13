@@ -51,3 +51,32 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     </div>
   </body>
 </html>
+
+<style is:global>
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply pt-2;
+  }
+  p {
+    @apply py-2;
+  }
+  ul {
+    @apply list-disc list-inside p-2;
+  }
+  blockquote {
+    @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
+  }
+
+  blockquote > p {
+    @apply py-1;
+  }
+  blockquote > p > strong {
+    @apply font-bold font-mono;
+  }
+
+  hr {
+    @apply my-2 border-cyan-800 rounded-md border-2;
+  }
+</style>
