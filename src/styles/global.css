@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  body {
+    @apply bg-slate-900 md:py-8 flex flex-col items-center h-screen justify-between;
+  }
   h1 {
     @apply text-6xl pb-4;
   }
@@ -16,7 +19,7 @@
     @apply text-xl;
   }
   main {
-    @apply px-4;
+    @apply px-4 md:w-3/4;
   }
 
   main > p {
@@ -24,5 +27,8 @@
   }
   main > p > a {
     @apply text-cyan-600 underline underline-offset-2;
+  }
+  .container {
+    @apply w-full md:w-3/4 flex flex-col md:flex-row items-start bg-slate-50 md:rounded-md pb-4 md:py-4;
   }
 }
