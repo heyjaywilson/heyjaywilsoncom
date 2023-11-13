@@ -1,0 +1,67 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import NavLink from "../components/NavLink.astro";
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <BaseHead title={title} description={description} />
+  </head>
+  <body class="bg-slate-900">
+    <div class="w-full flex flex-col items-center">
+      <div
+        class="w-full flex flex-col bg-slate-100 items-start"
+      >
+        <div
+          class="w-full flex flex-col justify-center my-4 pl-4 text-xl"
+        >
+          <div class="flex gap-x-4">
+            <img
+              src="https://avatars.githubusercontent.com/u/19311157?v=4"
+              class="w-12 h-12 rounded-md"
+            />
+            <div class="">
+              <span class="text-4xl font-mono font-semibold"> Jay Wilson</span>
+              <div
+                class="bg-gradient-to-r from-cyan-500 to-cyan-300 h-2 -mt-2 skew-y-2 skew-x-1 hover:-skew-y-3 opacity-90"
+              >
+              </div>
+            </div>
+          </div>
+          <nav class="pt-4 flex gap-4">
+            <div class="font-mono flex-grow-0 inline-block">
+              <NavLink href="/" class="text-slate-900 hover:text-cyan-600">
+                Home
+              </NavLink>
+            </div>
+            <div class="font-mono">
+              <NavLink href="/blog" class="text-slate-900 hover:text-cyan-600">
+                Blog
+              </NavLink>
+            </div>
+            <div class="font-mono">
+              <NavLink href="/about" class="text-slate-900 hover:text-cyan-600">
+                About
+              </NavLink>
+            </div>
+          </nav>
+        </div>
+        <main>
+          <slot />
+        </main>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>
