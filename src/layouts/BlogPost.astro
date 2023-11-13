@@ -29,19 +29,20 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             </div>
             <!-- Article -->
             <div>
-              <div>
-                <div>
-                  <FormattedDate date={pubDate} />
+                <div class="font-mono text-sm pb-4">
+                  <h1>{title}</h1>
+                <p>{description}</p>
+                <div class="text-xs flex gap-x-4">
+                  <div>Published: <FormattedDate date={pubDate} /></div>
                   {
                     updatedDate && (
-                      <div class="last-updated-on">
-                        Last updated on <FormattedDate date={updatedDate} />
+                      <div>
+                        Last updated: <FormattedDate date={updatedDate} />
                       </div>
                     )
                   }
                 </div>
-                <h1>{title}</h1>
-              </div>
+                </div>
               <slot />
             </div>
           </articl>
