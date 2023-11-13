@@ -18,4 +18,11 @@
   main {
     @apply px-4;
   }
+
+  main > p {
+    @apply py-1;
+  }
+  main > p > a {
+    @apply text-cyan-600 underline underline-offset-2;
+  }
 }
