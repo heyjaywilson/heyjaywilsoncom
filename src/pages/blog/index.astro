@@ -13,17 +13,17 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <Default title="Blog" description="Here are some topics I felt I needed/wanted to write">
+  <h1>Blog</h1>
   <section>
     <ul>
       {
         posts.map((post) => (
-          <li>
+          <li class="py-2">
             <a href={`/blog/${post.slug}/`}>
               <img
-                width={720}
-                height={360}
                 src={post.data.heroImage}
                 alt=""
+                class="rounded-md w-full h-40"
               />
               <h4 class="title">{post.data.title}</h4>
               <p class="date">
