@@ -12,7 +12,7 @@ const { metatitle, title, description, pubDate, updatedDate, heroImage } = Astro
 
 <html lang="en">
   <head>
-    <BaseHead metaTitle={metatitle ?? title} title={title} description={description} />
+    <BaseHead metaTitle={metatitle ?? title} title={title} description={description} image={heroImage ?? "/blog-placeholder-2.jpg"} />
   </head>
 
   <body>
@@ -23,7 +23,7 @@ const { metatitle, title, description, pubDate, updatedDate, heroImage } = Astro
             <div>
               {
                 heroImage && (
-                  <img width={1020} height={510} src={heroImage} alt="" />
+                  <img class="rounded-md mb-4 w-full h-auto" src={heroImage} alt="" />
                 )
               }
             </div>
@@ -100,9 +100,9 @@ const { metatitle, title, description, pubDate, updatedDate, heroImage } = Astro
   }
 
   a {
-    @apply text-cyan-600 underline underline-offset-2 font-bold hover:text-cyan-800
+    @apply text-cyan-600 underline underline-offset-2 hover:text-cyan-800
   }
   .affiliateLink {
-    @apply text-green-600 underline underline-offset-2 font-bold hover:text-green-800
+    @apply text-green-600 underline underline-offset-2 hover:text-green-800
   }
 </style>
