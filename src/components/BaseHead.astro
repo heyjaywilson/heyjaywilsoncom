@@ -4,6 +4,7 @@
 import '../styles/global.css';
 
 interface Props {
+	metaTitle: string;
 	title: string;
 	description: string;
 	image?: string;
@@ -11,7 +12,7 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { metaTitle, title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -25,7 +26,7 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<meta name="title" content={title} />
+<meta name="title" content={metaTitle ?? title} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
