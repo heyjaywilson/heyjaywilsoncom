@@ -22,18 +22,15 @@ const { title, description } = Astro.props;
     <div class="container">
       <Header />
       <main>
+        <div class="lg:hidden flex gap-8 text-lg pb-4 lg:pb-0">
+          <a href="/rss.xml" target=”_blank”><i class="fa-solid fa-square-rss text-orange-600 hover:text-cyan-500"></i></a>
+          <a href="https://instagram.com/heyjaywilson" target=”_blank”><i class="fa-brands fa-instagram ml-4 text-cyan-600"></i></a>
+          <a href="https://www.threads.net/@heyjaywilson" target="_blank"><i class="fa-brands fa-threads text-cyan-600"></i></a>
+          <a href="https://ko-fi.com/heyjaywilson" target="_blank"><i class="fa-regular fa-mug-hot text-cyan-600"></i></a>
+        </div>
         <slot />
       </main>
     </div>
     <Footer />
-    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-    <script>
-      kofiWidgetOverlay.draw('heyjaywilson', {
-        'type': 'floating-chat',
-        'floating-chat.donateButton.text': 'Support Me',
-        'floating-chat.donateButton.background-color': '#f45d22',
-        'floating-chat.donateButton.text-color': '#fff'
-      });
-    </script>
   </body>
 </html>
