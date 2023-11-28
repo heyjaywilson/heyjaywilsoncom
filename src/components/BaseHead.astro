@@ -11,7 +11,7 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-  
+
 const { metaTitle, title, description, image = '/blog-placeholder-2.jpg' } = Astro.props;
 ---
 
@@ -42,3 +42,9 @@ const { metaTitle, title, description, image = '/blog-placeholder-2.jpg' } = Ast
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Analytics -->
+<script
+  src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+  data-app-id="7FD683B8-983F-4FDA-8838-4B4DC4FAF911"
+></script>
