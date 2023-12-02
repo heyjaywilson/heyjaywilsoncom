@@ -4,11 +4,12 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
 type Props = {
+  metatitle: string | undefined;
   title: string;
   description: string;
 };
 
-const { title, description } = Astro.props;
+const { metatitle, title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,7 +17,7 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <BaseHead metaTitle={title} title={title} description={description} />
+    <BaseHead metaTitle={metatitle ?? title} title={title} description={description} />
   </head>
   <body>
     <div class="container">
@@ -28,3 +29,18 @@ const { title, description } = Astro.props;
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  hr {
+    @apply my-4;
+  }
+.callout > p {
+  @apply text-xs;
+}
+  .about-list > li > p > a {
+    @apply text-cyan-600 underline underline-offset-4;
+  }
+  .about-page > p > a {
+    @apply text-cyan-600 underline underline-offset-4;
+  }
+</style>

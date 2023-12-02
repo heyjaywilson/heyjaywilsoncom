@@ -29,9 +29,11 @@
   main > p {
     @apply py-1;
   }
-  main > p > a {
-    @apply text-cyan-600 underline underline-offset-2;
+
+  a.rss {
+    @apply text-orange-900 hover:text-orange-500;
   }
+
   .container {
     @apply w-full lg:w-3/4 flex flex-col lg:flex-row items-start justify-start bg-slate-50 lg:rounded-md pb-4 md:py-4;
   }
