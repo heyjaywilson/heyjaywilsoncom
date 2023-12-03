@@ -45,6 +45,17 @@ const { metatitle, title, description, pubDate, updatedDate, heroImage } = Astro
                 </div>
               <slot />
             </div>
+            <hr class="my-2 border-slate-400 rounded-md border-1;"/>
+            <div >
+              <p class="text-sm">Thanks for reading! If you want these posts directly in your inbox, then please <a href="https://heyjaywilson.substack.com/subscribe?">subscribe on Substack.</a></p>
+            </div>
+
+      <div class="lg:hidden flex gap-8 text-lg py-6 lg:py-0">
+        <a href="/rss.xml" target=”_blank”><i class="fa-solid fa-square-rss text-orange-600 hover:text-cyan-500"></i></a>
+        <a href="https://instagram.com/heyjaywilson" target=”_blank”><i class="fa-brands fa-instagram ml-4 text-cyan-600"></i></a>
+        <a href="https://www.threads.net/@heyjaywilson" target="_blank"><i class="fa-brands fa-threads text-cyan-600"></i></a>
+        <a href="https://ko-fi.com/heyjaywilson" target="_blank"><i class="fa-regular fa-mug-hot text-cyan-600"></i></a>
+      </div>
             <script src="https://giscus.app/client.js"
         data-repo="heyjaywilson/heyjaywilsoncom"
         data-repo-id="R_kgDOKoCaMQ"
@@ -64,6 +75,7 @@ const { metatitle, title, description, pubDate, updatedDate, heroImage } = Astro
           </article>
         </main>
       </div>
+
       <Footer />
   </body>
 </html>
