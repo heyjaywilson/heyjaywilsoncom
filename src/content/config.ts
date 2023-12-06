@@ -10,7 +10,8 @@ const blog = defineCollection({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
-		canonicalURL: z.string().optional()
+		canonicalURL: z.string().optional(),
+		videoID: z.string().optional()
 	}),
 });
 
