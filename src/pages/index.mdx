@@ -3,6 +3,7 @@ layout: ../layouts/Default.astro
 title: "Hey I'm Jay 👋"
 description: "It's me. I'm the problem."
 ---
+import FeaturedPosts from "../components/FeaturedPosts.astro";
 import MostRecentPosts from "../components/MostRecentPosts.astro";
 
 # Hey! I'm Jay 👋
@@ -10,6 +11,6 @@ import MostRecentPosts from "../components/MostRecentPosts.astro";
 I like to solve problems using Swift, making YouTube videos, and playing board games with friends.
 
 <div class="pt-8">
-## Most Recent Posts
+<FeaturedPosts />
 <MostRecentPosts/>
 </div>
