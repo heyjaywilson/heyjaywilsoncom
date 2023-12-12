@@ -16,4 +16,16 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const workExperience = defineCollection({
+	schema: z.object({
+		position: z.string(),
+		employer: z.string(),
+		website: z.string().optional(),
+		startDate: z.coerce.date(),
+		endDate: z.coerce.date().optional(),
+		icon: z.string(),
+		isPresent: z.boolean(),
+	})
+})
+
+export const collections = { blog, workExperience };
