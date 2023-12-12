@@ -1,0 +1,124 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import { getCollection } from "astro:content";
+
+const mostRecentPosts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 5);
+
+const featuredPost = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .filter((a) => a.data.isFeatured?.valueOf() === true)
+  .slice(0, 1);
+
+const today = new Date();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      metaTitle="HeyJayWilson"
+      title="Jay's Website"
+      description="Hi. It's me. I'm the problem it's me."
+    />
+  </head>
+  <body class="px-4 bg-slate-50 md:flex md:flex-col md:items-center">
+    <header class="mb-4">
+      <nav
+        class="flex justify-between w-72 m-auto my-2 px-4 gap-x-4 bg-sky-800 text-slate-50 shadow-md rounded-full"
+      >
+        <a href="/" class="p-2 my-2 rounded-md"
+          ><i class="fa-solid fa-house"></i></a
+        >
+        <a href="/blog" class="p-2 my-2 rounded-md"
+          ><i class="fa-solid fa-keyboard"></i></a
+        >
+        <a href="/blog" class="p-2 my-2 rounded-md"
+          ><i class="fa-solid fa-briefcase"></i></a
+        >
+        <a href="/blog" class="p-2 my-2 rounded-md"
+          ><img
+            src="https://avatars.githubusercontent.com/u/19311157?v=4"
+            class="w-6 h-6 rounded-md"
+            alt="Jay as a memoji"
+          /></a
+        >
+      </nav>
+    </header>
+    <main class="md:w-5/6">
+      <section id="intro" class="mb-4">
+        <h1 class="font-extrabold">Hey! I'm Jay</h1>
+        <p class="py-2">
+          I like to solve problems using Swift, make YouTube videos, and take
+          photos. I also really enjoy a good cup of coffee.
+        </p>
+        <p class="py-2">
+          I'm currently working on <a
+            href="https://blueprint.heyjaywilson.com"
+            class="font-bold underline underline-offset-4">Blueprint</a
+          >, a privacy first tracking app.
+        </p>
+      </section>
+      <section id="posts" class="my-4">
+        <h2 class="font-extrabold">Featured post</h2>
+        <ul>
+          {
+            featuredPost.map((post) => (
+              <li class="my-6 md:my-2 bg-sky-200 md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none hover:bg-sky-200">
+                <a href={`/blog/${post.slug}`} class="md:flex">
+                  {post.data.heroImage && (
+                    <img
+                      src={post.data.heroImage}
+                      alt=""
+                      class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full"
+                    />
+                  )}
+                  <div class="p-4">
+                    <h3 class="text-lg font-bold">{post.data.title}</h3>
+                  <p class="">{post.data.description}</p>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <h2 class="font-extrabold mb-2">Recent posts</h2>
+        <ul>
+          {
+            mostRecentPosts.map((post) => (
+              <li class="my-6 md:my-2 bg-sky-200 md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none hover:bg-sky-200">
+                <a href={`/blog/${post.slug}`} class="md:flex">
+                  {post.data.heroImage && (
+                    <img
+                      src={post.data.heroImage}
+                      alt=""
+                      class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full"
+                    />
+                  )}
+                  <div class="p-4">
+                    <h3 class="text-lg font-bold">{post.data.title}</h3>
+                  <p class="">{post.data.description}</p>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+    <footer class="w-full text-center">
+      <div class="text-xl flex my-4 justify-center">
+        <a href="" class="pr-8"><i class="fa-solid fa-square-rss"></i></a>
+        <a href="" class="px-2"><i class="fa-brands fa-github"></i></a>
+        <a href="" class="px-2"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" class="px-2"><i class="fa-brands fa-mastodon"></i></a>
+        <a href="" class="px-2"><i class="fa-brands fa-threads"></i></a>
+      </div>
+      <div class="text-xs">
+        &copy; {today.getFullYear()} CCTPlus LLC. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
