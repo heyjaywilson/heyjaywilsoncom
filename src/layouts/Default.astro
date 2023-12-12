@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Navigation from "../components/site/Navigation.astro";
+import Footer from "../components/site/Footer.astro";
 
 type Props = {
   metatitle: string | undefined;
@@ -15,24 +15,14 @@ const { metatitle, title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <BaseHead metaTitle={metatitle ?? title} title={title} description={description} />
   </head>
   <body>
-    <div class="container">
-      <Header />
+    <Navigation/>
       <main>
-        <div class="lg:hidden flex gap-8 text-lg pb-4 lg:pb-0">
-          <a href="/rss.xml" target=”_blank”><i class="fa-solid fa-square-rss text-orange-600 hover:text-cyan-500"></i></a>
-          <a href="https://instagram.com/heyjaywilson" target=”_blank”><i class="fa-brands fa-instagram ml-4 text-cyan-600"></i></a>
-          <a href="https://www.threads.net/@heyjaywilson" target="_blank"><i class="fa-brands fa-threads text-cyan-600"></i></a>
-          <a href="https://ko-fi.com/heyjaywilson" target="_blank"><i class="fa-regular fa-mug-hot text-cyan-600"></i></a>
-        </div>
         <slot />
       </main>
-    </div>
-    <Footer />
+      <Footer />
   </body>
 </html>
 

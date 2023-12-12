@@ -3,14 +3,26 @@
 @tailwind utilities;
 
 @layer components {
-  /* body {
-    @apply bg-slate-900 lg:py-8 flex flex-col items-center h-screen justify-between;
-  }*/
+  body {
+    @apply px-4 bg-slate-50 md:flex md:flex-col md:items-center w-full;
+  }
   h1 {
-    @apply text-5xl pb-2;
+    @apply text-5xl pb-2 font-extrabold;
   }
 
   h2 {
-    @apply text-4xl pb-2;
+    @apply text-4xl pb-2 font-extrabold;
+  }
+
+  section {
+    @apply mb-4;
+  }
+
+  main {
+    @apply relative md:w-5/6;
+  }
+
+  p {
+    @apply py-1;
   }
 }

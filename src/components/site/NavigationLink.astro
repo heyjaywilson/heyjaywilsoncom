@@ -1,0 +1,17 @@
+---
+interface Props {
+  activeClass: string;
+  inactiveClass: string;
+  icon: string;
+  link: string;
+}
+
+const { activeClass, inactiveClass, icon, link } = Astro.props;
+
+const { pathname } = Astro.url;
+const isActive = link === pathname || link === pathname.replace(/\/$/, "");
+---
+
+<a href={`${link}`} class="p-2 my-2 rounded-md">
+  <i class={`${isActive ? activeClass : inactiveClass} ${icon}`}></i>
+</a>

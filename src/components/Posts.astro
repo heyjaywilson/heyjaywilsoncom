@@ -1,29 +1,36 @@
 ---
 import FormattedDate from "./FormattedDate.astro";
 import { getCollection } from "astro:content";
+interface Props {
+  limit?: number;
+}
 
-const featuredPosts = (await getCollection("blog"))
+const {limit} = Astro.props;
+let posts = (await getCollection("blog"))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .filter((a) => a.data.isFeatured?.valueOf() === true)
-  .slice(0, 1);
+if (limit) {
+  posts = posts.slice(0, limit);
+}
+
 ---
 
 <section>
-  <h2>Featured post</h2>
+  <h2>Most Recent Posts</h2>
   <ul>
     {
-      featuredPosts.map((post) => (
-        <li class="my-6 md:my-2 bg-orange-200 md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none hover:bg-orange-200">
+      posts.map((post) => (
+        <li class={`my-6 md:my-2 ${post.data.isFeatured ? "bg-orange-200" : "bg-sky-200"} md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none ${post.data.isFeatured ? "hover:bg-orange-200" : "hover:bg-sky-200"}`}>
           <a href={`/blog/${post.slug}`} class="md:flex">
             {post.data.heroImage && (
               <img
                 src={post.data.heroImage}
                 alt=""
-                class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full"
+                class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full md:py-1"
               />
             )}
             <div class="p-4 md:py-0">
               <h3 class="text-lg font-bold">{post.data.title}</h3>
+              <span class="text-xs">Published on <FormattedDate date={post.data.pubDate}/></span>
               <p class="p-none">{post.data.description}</p>
             </div>
           </a>
