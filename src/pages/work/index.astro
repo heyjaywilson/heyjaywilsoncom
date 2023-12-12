@@ -6,7 +6,7 @@ import Default from "../../layouts/Default.astro";
 const workExp = (await getCollection("workExperience")).sort(
   (a, b) => (b.data.startDate.valueOf() - a.data.startDate.valueOf())
 ).sort(
-  (a, b) => (b.data.isPresent.valueOf() - a.data.isPresent.valueOf())
+  (a, b) => ((b.data.isPresent.valueOf() ? 1 : 0)  - (a.data.isPresent.valueOf() ? 1 : 0 ))
 );
 ---
 
