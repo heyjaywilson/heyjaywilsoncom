@@ -2,117 +2,127 @@
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/site/Navigation.astro";
-import Footer from "../components/Footer.astro";
+import Footer from "../components/site/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { metatitle, title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { metatitle, title, description, pubDate, updatedDate, heroImage, includeBMC } =
+  Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead metaTitle={metatitle ?? title} title={title} description={description} image={heroImage ?? "/blog-placeholder-2.jpg"} />
+    <BaseHead
+      metaTitle={metatitle ?? title}
+      title={title}
+      description={description}
+      image={heroImage ?? "/blog-placeholder-2.jpg"}
+    />
   </head>
 
   <body>
-        <Navigation />
-        <main>
-          <article class="px-2">
-            <div>
+    <Navigation />
+    <main>
+      <article class="px-2">
+        <div>
+          {
+            heroImage && (
+              <img
+                class="rounded-md mb-4 w-full h-auto"
+                src={heroImage}
+                alt=""
+              />
+            )
+          }
+        </div>
+        <!-- Article -->
+        <div>
+          <div class="font-mono pb-4">
+            <h1>{title}</h1>
+            <p class="text-sm">{description}</p>
+            <div class="text-xs flex gap-x-4">
+              <div>Published: <FormattedDate date={pubDate} /></div>
               {
-                heroImage && (
-                  <img class="rounded-md mb-4 w-full h-auto" src={heroImage} alt="" />
+                updatedDate && (
+                  <div>
+                    Last updated: <FormattedDate date={updatedDate} />
+                  </div>
                 )
               }
             </div>
-            <!-- Article -->
-            <div>
-                <div class="font-mono pb-4">
-                  <h1>{title}</h1>
-                <p class="text-sm">{description}</p>
-                <div class="text-xs flex gap-x-4">
-                  <div>Published: <FormattedDate date={pubDate} /></div>
-                  {
-                    updatedDate && (
-                      <div>
-                        Last updated: <FormattedDate date={updatedDate} />
-                      </div>
-                    )
-                  }
-                </div>
-                </div>
-              <slot />
-            </div>
-            <hr class="my-2 border-slate-400 rounded-md border-1;"/>
-            <div >
-              <p class="text-sm">Thanks for reading! If you want these posts directly in your inbox, then please <a href="https://heyjaywilson.substack.com/subscribe?">subscribe on Substack.</a></p>
-            </div>
+          </div>
+          <slot />
+        </div>
+        <hr class="my-2 border-slate-400 rounded-md border-1;" />
+        {includeBMC &&
+        <div class="text-center flex flex-col mb-8">
+          <p class="">
+            Thanks for reading! If you want these posts directly in your inbox,
+            then please <a href="https://heyjaywilson.substack.com/subscribe?"
+              >subscribe on Substack.</a>
+          </p>
+          <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#29abe0', 'W7W2FFDSW');kofiwidget2.draw();</script> 
+        </div>
+        }
 
-      <div class="lg:hidden flex gap-8 text-lg py-6 lg:py-0">
-        <a href="/rss.xml" target=”_blank”><i class="fa-solid fa-square-rss text-orange-600 hover:text-cyan-500"></i></a>
-        <a href="https://instagram.com/heyjaywilson" target=”_blank”><i class="fa-brands fa-instagram ml-4 text-cyan-600"></i></a>
-        <a href="https://www.threads.net/@heyjaywilson" target="_blank"><i class="fa-brands fa-threads text-cyan-600"></i></a>
-        <a href="https://ko-fi.com/heyjaywilson" target="_blank"><i class="fa-regular fa-mug-hot text-cyan-600"></i></a>
-      </div>
-            <script src="https://giscus.app/client.js"
-        data-repo="heyjaywilson/heyjaywilsoncom"
-        data-repo-id="R_kgDOKoCaMQ"
-        data-category="Comments"
-        data-category-id="DIC_kwDOKoCaMc4Ca9te"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-</script>
-          </article>
-        </main>
-      <Footer />
-  </body>
+        <script
+          src="https://giscus.app/client.js"
+          data-repo="heyjaywilson/heyjaywilsoncom"
+          data-repo-id="R_kgDOKoCaMQ"
+          data-category="Comments"
+          data-category-id="DIC_kwDOKoCaMc4Ca9te"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="light"
+          data-lang="en"
+          crossorigin="anonymous"
+          async
+        ></script>
+      </article>
+    </main>
+
+    <Footer />
+  </body><style is:global>
+    h1 {
+      @apply text-6xl;
+    }
+    h2 {
+      @apply pt-4;
+    }
+    h3 {
+      @apply pt-2 pb-1;
+    }
+    p {
+      @apply py-2;
+    }
+    ul {
+      @apply list-disc list-outside p-2 ms-8 text-lg;
+    }
+    blockquote {
+      @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
+    }
+
+    blockquote > p {
+      @apply py-1;
+    }
+    blockquote > p > strong {
+      @apply font-bold font-mono;
+    }
+
+    hr {
+      @apply my-2 border-cyan-800 rounded-md border-2;
+    }
+
+    a {
+      @apply text-cyan-600 underline underline-offset-2 hover:text-cyan-800;
+    }
+
+    .affiliateLink {
+      @apply text-green-600 underline underline-offset-2 hover:text-green-800;
+    }
+  </style>
 </html>
-
-<style is:global>
-  h1 {
-    @apply text-6xl;
-  }
-  h2 {
-    @apply pt-4;
-  }
-  h3 {
-    @apply pt-2 pb-1;
-  }
-  p {
-    @apply py-2;
-  }
-  ul {
-    @apply list-disc list-outside p-2 ms-8 text-lg;
-  }
-  blockquote {
-    @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
-  }
-
-  blockquote > p {
-    @apply py-1;
-  }
-  blockquote > p > strong {
-    @apply font-bold font-mono;
-  }
-
-  hr {
-    @apply my-2 border-cyan-800 rounded-md border-2;
-  }
-
-  a {
-    @apply text-cyan-600 underline underline-offset-2 hover:text-cyan-800;
-  }
-
-  .affiliateLink {
-    @apply text-green-600 underline underline-offset-2 hover:text-green-800
-  }
-</style>

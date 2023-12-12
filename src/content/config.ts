@@ -13,6 +13,7 @@ const blog = defineCollection({
 		canonicalURL: z.string().optional(),
 		videoID: z.string().optional(),
 		isFeatured: z.boolean().optional(),
+		includeBMC: z.boolean(),
 	}),
 });
 
