@@ -1,0 +1,24 @@
+---
+import { SOCIAL_MEDIA } from "../../consts";
+
+const today = new Date();
+const socialLinks = [
+    SOCIAL_MEDIA.github,
+    SOCIAL_MEDIA.instagram,
+    SOCIAL_MEDIA.mastodon,
+    SOCIAL_MEDIA.threads,
+]
+---
+
+<footer class="w-full text-center">
+    <div class="text-xl flex my-4 justify-center">
+      <a href="" class="pr-8" target="_blank"><i class="fa-solid fa-square-rss"></i></a>
+      {socialLinks.map((link) => (
+        <a href={`${link.link}`} class="px-2" target="_blank"><i class={`fa-brands ${link.fontAwesome}`}></i></a>
+      ))
+      }
+    </div>
+    <div class="text-xs">
+      &copy; {today.getFullYear()} CCTPlus LLC. All rights reserved.
+    </div>
+  </footer>

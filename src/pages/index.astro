@@ -1,0 +1,39 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Navigation from "../components/site/Navigation.astro";
+import Footer from "../components/site/Footer.astro";
+import FeaturedPosts from "../components/FeaturedPosts.astro";
+import Posts from "../components/Posts.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      metaTitle="HeyJayWilson"
+      title="Jay's Website"
+      description="Hi. It's me. I'm the problem it's me."
+    />
+  </head>
+  <body>
+      <Navigation />
+    <main>
+      <section id="intro">
+        <h1>Hey! I'm Jay</h1>
+        <p>
+          I like to solve problems using Swift, make YouTube videos, and take
+          photos. I also really enjoy a good cup of coffee.
+        </p>
+        <p>
+          I'm currently working on <a
+            href="https://blueprint.heyjaywilson.com"
+            class="font-bold underline underline-offset-4">Blueprint</a
+          >, a privacy first tracking app.
+        </p>
+      </section>
+      <FeaturedPosts/>
+      <Posts limit={5}/>
+    </main>
+    <Footer/>
+  </body>
+</html>

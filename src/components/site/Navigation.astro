@@ -1,0 +1,32 @@
+---
+import NavigationLink from "./NavigationLink.astro";
+const navLocations = [
+  { link: "/", title: "Home", icon: "fa-house" },
+  { link: "/blog", title: "Blog", icon: "fa-keyboard" },
+  { link: "/work", title: "Work", icon: "fa-briefcase" },
+];
+---
+
+<header class="sticky top-0 my-4 z-10">
+  <nav
+    class="flex justify-between w-72 m-auto my-2 px-4 gap-x-4 bg-sky-800 text-slate-50 shadow-md rounded-full"
+  >
+    {
+      navLocations.map((location) => (
+        <NavigationLink
+          activeClass="fa-solid"
+          inactiveClass="fa-regular"
+          icon={location.icon}
+          link={location.link}
+        />
+      ))
+    }
+    <a href="/about" class="p-2 my-2 rounded-md"
+      ><img
+        src="https://avatars.githubusercontent.com/u/19311157?v=4"
+        class="w-6 h-6 rounded-md"
+        alt="Jay as a memoji"
+      /></a
+    >
+  </nav>
+</header>

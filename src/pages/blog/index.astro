@@ -1,12 +1,7 @@
 ---
-import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
 import Default from "../../layouts/Default.astro";
 import FeaturedPost from "../../components/FeaturedPosts.astro";
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+import Posts from "../../components/Posts.astro";
 ---
 
 <Default
@@ -14,39 +9,7 @@ const posts = (await getCollection("blog")).sort(
   metatitle="Blog - Jay Wilson"
   description="Here are some topics I felt I needed/wanted to write"
 >
-  <h1>Blog</h1>
-  <FeaturedPost />
-  <section>
-    <h2 class="py-4">All posts</h2>
-    <ul
-      class="grid grid-cols-1 lg:grid-cols-2 lg:gap-x-8 gap-y-4 lg:gap-y-16 mb-8"
-    >
-      {
-        posts.map((post) => (
-          <li class="h-full">
-            <a
-              href={`/blog/${post.slug}/`}
-              class="h-full flex flex-col gap-y-2 justify-between"
-            >
-              {post.data.heroImage && (
-                <img
-                  src={post.data.heroImage}
-                  alt=""
-                  class="rounded-md w-full h-40 object-cover"
-                />
-              )}
-              <h3 class="flex-grow">{post.data.title}</h3>
-              <p class="font-mono text-sm">
-                <FormattedDate date={post.data.pubDate} />
-              </p>
-              <p class="flex-grow">{post.data.description}</p>
-              <button class="bg-cyan-500 p-2 rounded-md text-slate-50 font-semibold">
-                Read post
-              </button>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
+  <h1 class="mb-4">Blog</h1>
+  <div class="mb-8"><FeaturedPost /></div>
+  <Posts />
 </Default>
