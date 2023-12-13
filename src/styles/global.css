@@ -7,7 +7,7 @@
     @apply px-4 bg-slate-50 md:flex md:flex-col md:items-center w-full;
   }
   h1 {
-    @apply text-5xl pb-2 font-extrabold;
+    @apply text-5xl pb-2 font-extrabold ;
   }
 
   h2 {
@@ -19,7 +19,7 @@
   }
 
   main {
-    @apply relative md:w-5/6;
+    @apply relative w-full md:max-w-4xl md:mx-auto;
   }
 
   p {
