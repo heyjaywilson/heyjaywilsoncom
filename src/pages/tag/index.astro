@@ -1,11 +1,17 @@
 ---
 import Default from "../../layouts/Default.astro";
+import getPostsForTag from "../../utils/functions/getPostsForTag";
 import getUniqueTags from "../../utils/functions/getUniqueTags";
 
 import { getCollection } from "astro:content";
-const posts = await getCollection("blog");
 
-let tags = getUniqueTags(posts);
+const nonDrafts = (await getCollection("blog", ({ data }) => !data.draft))
+
+let tags = getUniqueTags(nonDrafts);
+
+const postCount = (tag: string) => {
+  return getPostsForTag(nonDrafts, tag).length
+}
 ---
 
 <Default
@@ -20,7 +26,8 @@ let tags = getUniqueTags(posts);
       tags.map((tag) => (
         <li class="my-4">
             <span class="font-bold">#</span>
-            <a href={`tag/${tag}`} class="underline">{tag}</a>
+            <a href={`/tag/${tag}`} class="underline">{tag}</a>{" "}
+            ({postCount(tag)})
         </li>
       ))
     }

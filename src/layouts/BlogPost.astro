@@ -7,7 +7,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { metatitle, title, description, pubDate, updatedDate, heroImage, includeBMC } =
+const { metatitle, title, description, pubDate, updatedDate, heroImage, includeBMC, tags } =
   Astro.props;
 ---
 
@@ -54,7 +54,12 @@ const { metatitle, title, description, pubDate, updatedDate, heroImage, includeB
           </div>
           <slot />
         </div>
-        <hr class="my-2 border-slate-400 rounded-md border-1;" />
+        <hr class="mt-4 my-2 border-slate-400 rounded-md border-1;" />
+        <div id="tags" class="py-4 flex flex-wrap">
+          {tags.map((tag)=> (
+            <span class="mr-4 font-mono"><a href={`/tag/${tag}`} class="no-underline"><span class="font-bold">#</span>{tag}</a></span>
+          ))}
+        </div>
         {includeBMC &&
         <div class="text-center flex flex-col mb-8">
           <p class="">
