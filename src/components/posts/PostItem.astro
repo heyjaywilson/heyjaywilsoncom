@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry } from 'astro:content';
+interface Props {
+    post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+
+---
+
+<a href={`/blog/${post.slug}`} class="md:flex">
+    {post.data.heroImage && (
+      <img
+        src={post.data.heroImage}
+        alt=""
+        class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full"
+      />
+    )}
+    <div class="p-4 md:py-0">
+      <h3 class="text-lg font-bold">{post.data.title}</h3>
+      <p class="p-none">{post.data.description}</p>
+    </div>
+  </a>

@@ -1,0 +1,44 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Default from "../../layouts/Default.astro";
+import PostItem from "../../components/posts/PostItem.astro";
+import getUniqueTags from "../../utils/functions/getUniqueTags";
+import { SITE_TITLE } from "../../consts";
+import { slugifyAll } from "../../utils/functions/slugify";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+  tag: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  const tags = getUniqueTags(posts);
+
+  return tags.map(tag => {
+    return {
+      params: { slug: tag },
+      props: { tag },
+    };
+  });
+}
+
+const { tag } = Astro.props;
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).filter(post => (slugifyAll(post.data.tags).includes(tag)));
+---
+
+<Default
+  title={`${tag} | ${SITE_TITLE}`}
+  metatitle={`${tag} | ${SITE_TITLE}`}
+  description={`All the posts for the ${tag} tag`}
+>
+  <h1 class="mb-4">#{tag}</h1>
+
+  {posts.map((post) => 
+  <ul>
+    <li class={`my-6 md:my-2 transition ease-in-out duration-300 ${post.data.isFeatured ? "bg-orange-200" : "bg-sky-200"} md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none ${post.data.isFeatured ? "hover:bg-orange-200" : "hover:bg-sky-200"}`}><PostItem post={post}/></li>
+  </ul>
+  )}
+</Default>

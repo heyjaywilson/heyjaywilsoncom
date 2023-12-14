@@ -1,5 +1,6 @@
 ---
-import FormattedDate from "./FormattedDate.astro";
+import FormattedDate from "../FormattedDate.astro";
+import PostItem from "./PostItem.astro";
 import { getCollection } from "astro:content";
 interface Props {
   limit?: number;
@@ -20,20 +21,7 @@ if (limit) {
     {
       posts.map((post) => (
         <li class={`my-6 md:my-2 transition ease-in-out duration-300 ${post.data.isFeatured ? "bg-orange-200" : "bg-sky-200"} md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none ${post.data.isFeatured ? "hover:bg-orange-200" : "hover:bg-sky-200"}`}>
-          <a href={`/blog/${post.slug}`} class="md:flex">
-            {post.data.heroImage && (
-              <img
-                src={post.data.heroImage}
-                alt=""
-                class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full md:py-1"
-              />
-            )}
-            <div class="p-4 md:py-0">
-              <h3 class="text-lg font-bold">{post.data.title}</h3>
-              <span class="text-xs">Published on <FormattedDate date={post.data.pubDate}/></span>
-              <p class="p-none">{post.data.description}</p>
-            </div>
-          </a>
+          <PostItem post={post}/>
         </li>
       ))
     }
