@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry } from 'astro:content';
+import FormattedDate from '../FormattedDate.astro';
 interface Props {
     post: CollectionEntry<"blog">;
 }
@@ -8,7 +9,7 @@ const { post } = Astro.props;
 
 ---
 
-<a href={`/blog/${post.slug}`} class="md:flex">
+<a href={`/blog/${post.slug}`} class="md:flex md:mb-8">
     {post.data.heroImage && (
       <img
         src={post.data.heroImage}
@@ -16,8 +17,9 @@ const { post } = Astro.props;
         class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full"
       />
     )}
-    <div class="p-4 md:py-0">
-      <h3 class="text-lg font-bold">{post.data.title}</h3>
-      <p class="p-none">{post.data.description}</p>
+    <div class="pl-4 md:py-0">
+      <h3 class="text-lg font-bold pb-0">{post.data.title}</h3>
+      <p class="p-0 font-mono text-sm"><FormattedDate date={post.data.pubDate}/></p>
+      <p class="p-0">{post.data.description}</p>
     </div>
   </a>
