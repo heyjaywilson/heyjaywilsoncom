@@ -5,7 +5,7 @@ import getUniqueTags from "../../utils/functions/getUniqueTags";
 
 import { getCollection } from "astro:content";
 
-const nonDrafts = (await getCollection("blog", ({ data }) => !data.draft))
+const nonDrafts = await getCollection("blog")
 
 let tags = getUniqueTags(nonDrafts);
 
