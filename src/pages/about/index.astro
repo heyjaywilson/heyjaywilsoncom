@@ -1,6 +1,5 @@
 ---
 import Default from "../../layouts/Default.astro";
-import { Image } from "astro:assets";
 import jaywilson from "../../images/jaywilson.png";
 import laptop from "../../images/jaywilsonlaptop.png";
 ---
@@ -14,12 +13,11 @@ import laptop from "../../images/jaywilsonlaptop.png";
   <section>
     <h2 class="mt-4">Hi! I'm Jay! 👋</h2>
     <p>
-      <Image
-        src={laptop}
+      <img
+        src={laptop.src}
         alt="Illustration of Jay behind a macbook pro with a trans flag"
         width={jaywilson.width / 2}
         height={jaywilson.height / 2}
-        densities={[1, 2]}
         class="inline float-left w-full md:w-1/5 rounded-md my-4 md:my-0 md:mr-4"
       />I currently work at an early stage <a
         href="https://matter.xyz"
