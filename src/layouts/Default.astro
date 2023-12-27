@@ -15,28 +15,30 @@ const { metatitle, title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead metaTitle={metatitle ?? title} title={title} description={description} />
+    <BaseHead
+      metaTitle={metatitle ?? title}
+      title={title}
+      description={description}
+    />
   </head>
   <body>
-    <Navigation/>
-      <main>
-        <slot />
-      </main>
-      <Footer />
-  </body>
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body><style is:global>
+    hr {
+      @apply my-4;
+    }
+    .callout > p {
+      @apply text-xs;
+    }
+    .about-list > li > p > a {
+      @apply text-cyan-600 underline underline-offset-4;
+    }
+    .about-page > p > a {
+      @apply text-cyan-600 underline underline-offset-4;
+    }
+  </style>
 </html>
-
-<style is:global>
-  hr {
-    @apply my-4;
-  }
-.callout > p {
-  @apply text-xs;
-}
-  .about-list > li > p > a {
-    @apply text-cyan-600 underline underline-offset-4;
-  }
-  .about-page > p > a {
-    @apply text-cyan-600 underline underline-offset-4;
-  }
-</style>

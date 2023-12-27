@@ -10,30 +10,41 @@ import Posts from "../components/posts/Posts.astro";
 <html lang="en">
   <head>
     <BaseHead
-      metaTitle="HeyJayWilson"
+      metaTitle="Debugging life with Jay"
       title="Jay's Website"
-      description="Hi. It's me. I'm the problem it's me."
+      description="Jay's spot to drink coffee, think about code, and make sure life is going alright."
     />
   </head>
   <body>
-      <Navigation />
+    <Navigation />
     <main>
       <section id="intro">
         <h1>Hey! I'm Jay</h1>
         <p>
-          I like to solve problems using Swift, make YouTube videos, and take
-          photos. I also really enjoy a good cup of coffee.
+          I'm a <a
+            href="https://github.com/heyjaywilson"
+            target="_blank">software engineer</a
+          > that likes to make <a
+            href="https://apps.apple.com/bg/developer/cct-plus-llc-apps/id1399672977"
+            target="_blank">iOS Apps</a
+          >. I also really enjoy making <a
+            href="https://www.youtube.com/channel/UC6na4Lq0ozPBjHD1X42szEQ"
+            target="_blank">YouTube</a
+          > videos and <a
+            href="https://instagram.com/heyjaywilson"
+            target="_blank">Instagram</a
+          > posts.
         </p>
         <p>
           I'm currently working on <a
             href="https://blueprint.heyjaywilson.com"
-            class="font-bold underline underline-offset-4">Blueprint</a
+            target="_blank">Blueprint</a
           >, a privacy first tracking app.
         </p>
       </section>
-      <FeaturedPosts/>
-      <Posts limit={5}/>
+      <FeaturedPosts />
+      <Posts limit={5} />
     </main>
-    <Footer/>
+    <Footer />
   </body>
 </html>
