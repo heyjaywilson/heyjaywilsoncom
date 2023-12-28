@@ -27,7 +27,7 @@
   }
 
   main {
-    @apply relative w-full md:max-w-5xl md:mx-auto;
+    @apply relative w-full md:max-w-3xl md:mx-auto;
   }
 
   p {
