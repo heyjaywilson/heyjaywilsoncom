@@ -63,6 +63,7 @@ function fetchWebmentions() {
       throw new Error("Invalid webmention.io response.");
     }
     console.log(response.children)
+    console.log(url)
     return response.children;
   });
 }
