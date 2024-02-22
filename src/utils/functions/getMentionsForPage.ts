@@ -21,7 +21,7 @@ const getMentionsForPage = async (slug: string) => {
     .filter((a) => a.id === formattedSlug)
     .map((a) => a.data);
 
-  let data: WebMentionDwata = {
+  let data: WebMentionData = {
     allMentions: Array<WebMention>(),
     replies: Array<WebMention>(),
     reposts: Array<WebMention>(),
