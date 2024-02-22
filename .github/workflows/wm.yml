@@ -24,15 +24,11 @@ jobs:
         run: node ./src/webmentions.js
  
       - name: Commit to repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMIT_MSG: |
-            Fetch webmentions
-            skip-checks: true
         run: |
-          git config user.email "heyjay@cctplus.dev"
-          git config user.name "Jay Wilson"
+          git config user.name heyjaywilson
+          git config user.email contact@cctplus.dev
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/heyjaywilson/heyjaywilsoncom.git
           git checkout main
           git add .
-          git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin main)
+          git diff --quiet && git diff --staged --quiet || git commit -m "[generated]: Update webmentions"
+          git push origin main
