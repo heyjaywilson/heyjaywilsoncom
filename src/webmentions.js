@@ -5,7 +5,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { mapKeys, camel } from 'radash';
 
-const webmentions = fetchWebmentions().then((webmentions) => {
+fetchWebmentions().then((webmentions) => {
   webmentions.forEach((webmention) => {
     let slug = webmention['wm-target']
       .replaceAll(`https://`, '')
@@ -80,5 +80,3 @@ function fetchWebmentions() {
     return response.children;
   });
 }
-
-webmentions()
