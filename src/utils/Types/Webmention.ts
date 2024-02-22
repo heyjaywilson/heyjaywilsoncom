@@ -42,5 +42,5 @@ export type WebMention = z.infer<typeof webMention>
 export type WMAuthor = z.infer<typeof wmAuthor>
 export type WMContent = z.infer<typeof wmContent>
 
-export const objects = { webMention, wmAuthor, wmContent, webmentions }
+export { webMention, wmAuthor, wmContent, webmentions }
 export const enums = { wmProperty }
