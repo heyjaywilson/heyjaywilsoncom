@@ -1,0 +1,13 @@
+---
+import { type WebMention } from "../../utils/types/Webmention";
+interface Props {
+  mention: WebMention;
+}
+
+const mention = Astro.props.mention
+---
+<div id=`${mention.wmId ?? 0}` class="flex items-center gap-2">
+  {mention.author.photo && (
+    <img src={mention.author.photo} class="w-12 rounded-md"/>
+  )}
+</div>

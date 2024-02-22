@@ -1,0 +1,158 @@
+---
+import { getMentionsForPage } from "../../utils/functions/getMentionsForPage";
+// Component imports
+import Mention from "./Mention.astro";
+import AuthorImage from "./AuthorImage.astro";
+
+const { bookmarks, reposts, likes, replies } =
+  await getMentionsForPage(Astro.url.pathname);
+
+const ids = {
+  replies: "repliesList",
+  reposts: "repostsList",
+  likes: "likesList",
+  bookmarks: "booksmarksList",
+  mentions: "mentionsList",
+  rsvp: "rsvpList",
+};
+---
+
+<script>
+  const ids = {
+    replies: "repliesList",
+    reposts: "repostsList",
+    likes: "likesList",
+    bookmarks: "booksmarksList",
+    mentions: "mentionsList",
+    rsvp: "rsvpList",
+  };
+  let elements = {
+    replies: document.getElementById(ids.replies),
+    reposts: document.getElementById(ids.reposts),
+    likes: document.getElementById(ids.likes),
+    bookmarks: document.getElementById(ids.bookmarks),
+    mentions: document.getElementById(ids.mentions),
+    rsvp: document.getElementById(ids.rsvp),
+  };
+
+  function showReplies() {
+    elements.replies?.classList.add("showMentionBlock");
+    elements.replies?.classList.remove("hide");
+    elements.reposts?.classList.add("hide");
+    elements.likes?.classList.add("hide");
+    elements.bookmarks?.classList.add("hide");
+    elements.mentions?.classList.add("hide");
+    elements.rsvp?.classList.add("hide");
+  }
+
+  function showReposts() {
+    elements.replies?.classList.add("hide");
+    elements.reposts?.classList.add("showMentionsBlock");
+    elements.reposts?.classList.remove("hide");
+    elements.likes?.classList.add("hide");
+    elements.bookmarks?.classList.add("hide");
+    elements.mentions?.classList.add("hide");
+    elements.rsvp?.classList.add("hide");
+  }
+
+  function showLikes() {
+    elements.replies?.classList.add("hide");
+    elements.reposts?.classList.add("hide");
+    elements.likes?.classList.remove("hide");
+    elements.likes?.classList.add("showMentionBlock");
+    elements.bookmarks?.classList.add("hide");
+    elements.mentions?.classList.add("hide");
+    elements.rsvp?.classList.add("hide");
+  }
+
+  function showBookmarks() {
+    elements.replies?.classList.add("hide");
+    elements.reposts?.classList.add("hide");
+    elements.likes?.classList.add("hide");
+    elements.bookmarks?.classList.remove("hidden");
+    elements.bookmarks?.classList.add("showMentionBlock");
+    elements.mentions?.classList.add("hidden");
+    elements.rsvp?.classList.add("hide");
+  }
+
+  const buttons = document.querySelectorAll("[data-wm]");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button instanceof HTMLElement) {
+      console.log(button.dataset.wm);
+      let buttonPushed: string = button.dataset.wm ?? "";
+      switch (buttonPushed) {
+        case "replies":
+          showReplies();
+          break;
+        case "reposts":
+          showReposts();
+          break;
+        case "likes":
+          showLikes();
+          break;
+        case "bookmarks":
+          showBookmarks();
+        default:
+          break;
+      }
+  }});
+  });
+</script>
+
+<div>
+  <div class="flex gap-8">
+    <button data-wm="replies">
+      <span class="flex gap-2 items-baseline">
+        <i class=`${replies.length > 0 ? 'fa-solid' : 'fa-regular'} fa-comment`
+        ></i>
+        <span>{replies.length}</span>
+      </span>
+    </button>
+    <button data-wm="reposts">
+      <span class="flex gap-2 items-baseline"
+        ><i
+          class=`${reposts.length ? 'fa-solid' : 'fa-duotone'} fa-arrows-repeat`
+        ></i>
+        <span>{reposts.length}</span></span
+      >
+    </button>
+    <button data-wm="likes">
+      <span class="flex gap-2 items-baseline"
+        ><i class=`${likes.length > 0 ? 'fa-solid' : 'fa-regular'} fa-star`></i>
+        <span>{likes.length}</span></span
+      >
+    </button>
+    <button data-wm="bookmarks">
+      <span class="flex gap-2 items-baseline"
+        ><i class=`${bookmarks.length > 0 ? 'fa-solid' : 'fa-regular'} fa-bookmark`></i>
+        <span>{bookmarks.length}</span></span
+      >
+    </button>
+  </div>
+  <div id={`${ids.replies}`} class="showMentionBlock">
+    { replies.length == 0 ? <p>No comments yet. Share on mastodon and see your comment or write a post on your blog if you support <a href="https://indieweb.org/Webmention">Webmentions</a></p> :<></>
+    }
+    {replies.map((reply) => <Mention mention={reply} />)}
+  </div>
+  <div id={`${ids.reposts}`} class="hide">
+    <p>
+      These people reposted this post on various platforms around the internet.
+    </p>
+    <div>
+      {reposts.map((reply) => <AuthorImage mention={reply} />)}
+    </div>
+  </div>
+  <div id={`${ids.likes}`} class="hide">
+    <p>
+      These people liked this post on various platforms around the internet.
+    </p>
+    {likes.map((reply) => <AuthorImage mention={reply} />)}
+  </div>
+  <div id={`${ids.bookmarks}`} class="hide">
+    <p>
+      These people bookmarked this post on various platforms around the internet.
+    </p>
+    {bookmarks.map((reply) => <AuthorImage mention={reply} />)}
+  </div>
+</div>
