@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import {objects} from '../utils/Types/Webmention';
+import {objects} from '../utils/types/Webmention';
 
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
