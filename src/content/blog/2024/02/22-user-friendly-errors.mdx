@@ -1,0 +1,26 @@
+---
+title: How to Catch Specific Error Types in Swift
+description: A quick snippet on how to catch specific error types
+pubDate: Feb 22 2024
+canonicalURL: "https://heyjaycodes.com/how-to-catch-specific-error-types-in-swift"
+tags:
+  - swift
+  - notes
+---
+
+I always forget how to do this and luckily [Natalie Panferova](https://twitter.com/natpanferova) at [Nilcoalescing](https://nilcoalescing.com/) wrote a great [article](https://nilcoalescing.com/blog/UserFriendlyDescriptionsAndRecoverySuggestionsForCustomErrorsInSwift/) about how to provide user friendly descriptions and how to catch specific error types.
+
+I'm mainly writing this so I have access to the part of that article that I forget, which is how to catch a specific error type.
+
+```swift
+do {
+    // Some type of work here
+} catch let error as ErrorTypeYouWantToCatch {
+    // Do something with that error
+} catch {
+    // Don't forget to have a catchall incase the
+    // error isn't what you expected
+}
+```
+
+Some benefits to catching error types is to present proper user facing notifications or to make the logger calls more useful to you as the developer.
