@@ -33,7 +33,7 @@ const workExperience = defineCollection({
 
 const webmentions = defineCollection({
   type: "data",
-  schema: webMention,
+  schema: z.array(webMention),
 });
 
 export const collections = { blog, workExperience, webmentions };
