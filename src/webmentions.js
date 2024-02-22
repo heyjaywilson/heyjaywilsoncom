@@ -80,3 +80,5 @@ function fetchWebmentions() {
     return response.children;
   });
 }
+
+webmentions()

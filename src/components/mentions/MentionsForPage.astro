@@ -1,12 +1,10 @@
 ---
-// Imports
-import { getCollection } from "astro:content";
 import { getMentionsForPage } from "../../utils/functions/getMentionsForPage";
 // Component imports
 import Mention from "./Mention.astro";
 import AuthorImage from "./AuthorImage.astro";
 
-const { allMentions, bookmarks, mentions, rsvp, reposts, likes, replies } =
+const { bookmarks, reposts, likes, replies } =
   await getMentionsForPage(Astro.url.pathname);
 
 const ids = {
@@ -71,38 +69,18 @@ const ids = {
     elements.replies?.classList.add("hide");
     elements.reposts?.classList.add("hide");
     elements.likes?.classList.add("hide");
-    elements.bookmarks?.classList.add("showMentionBlock");
     elements.bookmarks?.classList.remove("hidden");
+    elements.bookmarks?.classList.add("showMentionBlock");
     elements.mentions?.classList.add("hidden");
     elements.rsvp?.classList.add("hide");
   }
 
-  function showMentions() {
-    elements.replies?.classList.add("hide");
-    elements.reposts?.classList.add("hide");
-    elements.likes?.classList.add("hide");
-    elements.bookmarks?.classList.add("hide");
-    elements.mentions?.classList.add("showMentionBlock");
-    elements.mentions?.classList.remove("hide");
-    elements.rsvp?.classList.add("hide");
-  }
-
-  function showRSVP() {
-    elements.replies?.classList.add("hide");
-    elements.reposts?.classList.add("hide");
-    elements.likes?.classList.add("hide");
-    elements.bookmarks?.classList.add("hide");
-    elements.mentions?.classList.add("hide");
-    elements.rsvp?.classList.add("showMentionBlock");
-    elements.rsvp?.classList.remove("hide");
-  }
-
   const buttons = document.querySelectorAll("[data-wm]");
   buttons.forEach((button) => {
-    console.log(button.dataset.wm);
     button.addEventListener("click", () => {
+      if (button instanceof HTMLElement) {
       console.log(button.dataset.wm);
-      let buttonPushed: string = button.dataset.wm;
+      let buttonPushed: string = button.dataset.wm ?? "";
       switch (buttonPushed) {
         case "replies":
           showReplies();
@@ -118,7 +96,7 @@ const ids = {
         default:
           break;
       }
-    });
+  }});
   });
 </script>
 

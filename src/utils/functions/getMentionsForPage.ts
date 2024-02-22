@@ -46,11 +46,6 @@ const getMentionsForPage = async (slug: string) => {
   }
 };
 
-function getWebmention (a: CollectionEntry<'webmentions'>) {
-  let returnValue = a.data.map((b) => b);
-  return returnValue;
-};
-
 function formatSlugToID(slug: string) {
   if (slug === '/') {
     return 'home';
