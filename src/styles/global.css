@@ -41,4 +41,11 @@
   .affiliateLink {
     @apply text-green-600 underline underline-offset-2 hover:text-green-800;
   }
+
+  .showMentionBlock {
+    @apply flex flex-col;
+  }
+  .hide {
+    @apply hidden;
+  }
 }
