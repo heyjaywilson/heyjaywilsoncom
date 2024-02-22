@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { type WebMention, enums } from '../Types/Webmention';
+import { type WebMention, enums } from '../types/Webmention';
 
 interface WebMentionData {
   allMentions: Array<WebMention>;
