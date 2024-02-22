@@ -1,0 +1,17 @@
+---
+import { type WebMention } from "../../utils/Types/Webmention";
+import FormattedDate from '../FormattedDate.astro';
+import Author from './Author.astro';
+interface Props {
+  mention: WebMention;
+}
+
+const mention = Astro.props.mention
+console.log(mention)
+---
+<div id=`${mention.wmId ?? 0}`>
+  <Author author={mention.author}/>
+  {mention.published &&
+    <FormattedDate date={mention.wmReceived} />
+    }
+</div>

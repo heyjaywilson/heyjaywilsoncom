@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import {objects} from '../utils/Types/Webmention';
 
 const blog = defineCollection({
 	// Type-check frontmatter using a schema
@@ -30,4 +31,9 @@ const workExperience = defineCollection({
 	})
 })
 
-export const collections = { blog, workExperience };
+const webmentions = defineCollection({
+	type: 'data',
+	schema: objects.webmentions
+})
+
+export const collections = { blog, workExperience, webmentions };

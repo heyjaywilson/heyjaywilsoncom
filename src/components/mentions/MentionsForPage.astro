@@ -1,0 +1,50 @@
+---
+// Imports
+import { getCollection } from 'astro:content';
+import {
+  getMentionsForPage,
+} from '../../utils/functions/getMentionsForPage';
+// Component imports
+import Mention from './Mention.astro';
+import Like from './Like.astro';
+
+const { allMentions, bookmarks, mentions, rsvp, reposts, likes, replies } =
+  await getMentionsForPage(Astro.url.pathname);
+---
+
+<div>
+  <h2 class="text-lg">Webmentions</h2>
+  <div class="flex gap-8">
+    <button data-wm="replies">
+      <span class="flex gap-2 items-baseline">
+        <i class=`${replies.length > 0 ? 'fa-solid' : 'fa-regular'} fa-comment`
+        ></i>
+        <span>{replies.length}</span>
+      </span>
+    </button>
+    <button data-wm="reposts">
+      <span class="flex gap-2 items-baseline"
+        ><i
+          class=`${reposts.length ? 'fa-solid' : 'fa-duotone'} fa-arrows-repeat`
+        ></i>
+        <span>{reposts.length}</span></span
+      >
+    </button>
+    <button data-wm="likes">
+      <span class="flex gap-2 items-baseline"
+        ><i class=`${likes.length > 0 ? 'fa-solid' : 'fa-regular'} fa-star`></i>
+        <span>{likes.length}</span></span
+      >
+    </button>
+  </div>
+  <div class="pt-8" id="repliesList">
+    {replies.map((reply) => <Mention mention={reply} />)}
+  </div>
+  <div class="pt-8" id="repostsList">
+    {reposts.map((reply) => <Mention mention={reply} />)}
+  </div>
+  <div class="pt-8" id="likesList">
+    <p>These people liked this post on various platforms around the internet.</p>
+    {likes.map((reply) => <Like mention={reply} />)}
+  </div>
+</div>

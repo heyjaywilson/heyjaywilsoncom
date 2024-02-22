@@ -1,0 +1,26 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Webmention Rocks!",
+      "photo": "https://webmention.io/avatar/webmention.rocks/e08155b03da96cb1bdfd161ea24efdfad8d85d06afcee540ec246f1f613eb5a9.png",
+      "url": ""
+    },
+    "url": "https://webmention.rocks/receive/1",
+    "published": "2024-02-19T19:48:27-08:00",
+    "wmReceived": "2024-02-20T03:48:28Z",
+    "wmId": 1783152,
+    "wmSource": "https://webmention.rocks/receive/1/cb27a3411eccc07afedef1611c98d9e8",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/02/19-webmentions/",
+    "wmProtocol": "webmention",
+    "name": "Receiver Test #1",
+    "content": {
+      "html": "<p>This test verifies that you accept a Webmention request that contains a valid source and target URL. To pass this test, your Webmention endpoint must return either HTTP 200, 201 or 202 along with the <a href=\"https://www.w3.org/TR/webmention/#receiving-webmentions\">appropriate headers</a>.</p>\n        <p>If your endpoint returns HTTP 201, then it MUST also return a <code>Location</code> header. If it returns HTTP 200 or 202, then it MUST NOT include a <code>Location</code> header.</p>",
+      "text": "This test verifies that you accept a Webmention request that contains a valid source and target URL. To pass this test, your Webmention endpoint must return either HTTP 200, 201 or 202 along with the appropriate headers.\n        If your endpoint returns HTTP 201, then it MUST also return a Location header. If it returns HTTP 200 or 202, then it MUST NOT include a Location header."
+    },
+    "inReplyTo": "https://heyjaywilson.com/blog/2024/02/19-webmentions/",
+    "wmProperty": "in-reply-to",
+    "wmPrivate": false
+  }
+]
