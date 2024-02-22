@@ -5,7 +5,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 const parser = new MarkdownIt();
 
-export const get = async () => {
+export const GET = async () => {
   const allBlogposts = await getCollection('blog');
   const sortedPosts = allBlogposts.sort(
     (a, b) =>
