@@ -12,7 +12,40 @@ const { activeClass, inactiveClass, icon, link, label } = Astro.props;
 const { pathname } = Astro.url;
 const isActive = link === pathname || link === pathname.replace(/\/$/, "");
 ---
-
-<a href={`${link}`} class="p-2 my-2 rounded-md text-slate-50" aria-label={label}>
-  <i class={`${isActive ? activeClass : inactiveClass} ${icon}`}></i>
+<style>
+a {
+  font-family: var(--accent-font);
+  color: var(--brand);
+  text-decoration: none;
+  transition: all 0.2s;
+  display: flex;
+  padding: var(--padding-lg) var(--padding-md);
+  gap: var(--gap-md)
+}
+a:hover {
+  font-family: var(--accent-font);
+  font-weight: bold;
+  color: var(--secondary);
+  text-decoration: none;
+  padding: var(--padding-lg);
+} 
+a:focus {
+  text-decoration: none;
+  background-color: var(--brand);
+  color: var(--neutral);
+  padding: var(--padding-lg);
+}
+.active {
+  background-color: var(--secondary);
+  color: var(--neutral-inverse);
+  padding: var(--padding-lg);
+}
+.active:hover {
+  background-color: var(--secondary);
+  color: var(--brand);
+  padding: var(--padding-lg);
+}
+</style>
+<a href={`${link}`} aria-label={label} class={`${isActive ? 'active' : ''}`}>
+  <i class={`${isActive ? activeClass : inactiveClass} ${icon}`}></i> <span>{label}</span>
 </a>

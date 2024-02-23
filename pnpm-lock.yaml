@@ -20,6 +20,15 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.0.2
     version: 5.0.2(astro@3.4.2)(tailwindcss@3.3.5)
+  '@fontsource-variable/roboto-condensed':
+    specifier: ^5.0.1
+    version: 5.0.1
+  '@fontsource-variable/roboto-mono':
+    specifier: ^5.0.17
+    version: 5.0.17
+  '@fontsource/roboto':
+    specifier: ^5.0.8
+    version: 5.0.8
   astro:
     specifier: ^3.4.2
     version: 3.4.2(typescript@5.2.2)
@@ -29,9 +38,6 @@ dependencies:
   radash:
     specifier: ^11.0.0
     version: 11.0.0
-  tailwindcss:
-    specifier: ^3.0.24
-    version: 3.3.5
   typescript:
     specifier: ^5.2.2
     version: 5.2.2
@@ -854,6 +860,18 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/roboto-condensed@5.0.1:
+    resolution: {integrity: sha512-BvxJDzfIOoKAuwhANe4y4BzerukgJ4y0if5V4sQw9QjtlvADHr/FJgA0UXHSg2sx2GY4ds1XgurfFf/8sBVF2Q==}
+    dev: false
+
+  /@fontsource-variable/roboto-mono@5.0.17:
+    resolution: {integrity: sha512-+FyoiEmO2r/kiwPnsPtATK2ROMgNwCnVSvvs+K38GMLIgLSSk4cNqU3GCqJDMSvAPHMYd0gFPGKStFh+yLqd9Q==}
+    dev: false
+
+  /@fontsource/roboto@5.0.8:
+    resolution: {integrity: sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}

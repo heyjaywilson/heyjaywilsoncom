@@ -1,25 +1,50 @@
 ---
-import { type CollectionEntry } from 'astro:content';
-import FormattedDate from '../FormattedDate.astro';
+import { type CollectionEntry } from "astro:content";
+import FormattedDate from "../FormattedDate.astro";
 interface Props {
-    post: CollectionEntry<"blog">;
+  post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
-
 ---
 
-<a href={`/blog/${post.slug}`} class="md:flex md:mb-8 text-slate-950">
-    {post.data.heroImage && (
-      <img
-        src={post.data.heroImage}
-        alt=""
-        class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full"
-      />
-    )}
-    <div class="pl-4 pb-4 md:py-0">
-      <h3 class="text-lg font-bold pb-0">{post.data.title}</h3>
-      <p class="p-0 font-mono text-sm"><FormattedDate date={post.data.pubDate}/></p>
-      <p class="p-0">{post.data.description}</p>
-    </div>
-  </a>
+<a href={`/blog/${post.slug}`} class="h-entry">
+  {post.data.heroImage && <img src={post.data.heroImage} alt="" />}
+  <div class="properties">
+    <h3 class="p-name">{post.data.title}</h3>
+    <p class="dt-published"><FormattedDate date={post.data.pubDate} /></p>
+    <p class="p-summary">{post.data.description}</p>
+  </div>
+  <div class="h-card vcard u-author hidden">
+    <a href="/" class="p-name">Jay Wilson</a>
+  </div>
+</a>
+
+<style>
+  .h-entry {
+    position: relative;
+    display: flex;
+    align-items: top;
+    gap: var(--gap-md);
+    padding-bottom: var(--padding-xl);
+  }
+  .properties {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+  img {
+    width: 100px;
+    height: 100%;
+  }
+
+  a {
+    color: var(--neutral);
+    text-decoration: none;
+    font-family: var(--body-font);
+  }
+  h3, p {
+    margin: 0;
+    padding: 0;
+  }
+</style>

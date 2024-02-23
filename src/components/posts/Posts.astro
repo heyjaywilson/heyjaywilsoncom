@@ -16,13 +16,20 @@ if (limit) {
 
 <section>
   <h2>Most Recent Posts</h2>
-  <ul>
+  <ul class="h-feed">
     {
       posts.map((post) => (
-        <li class={`my-6 md:my-2 transition ease-in-out duration-300 ${post.data.isFeatured ? "bg-orange-200" : "bg-sky-200"} md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none ${post.data.isFeatured ? "hover:bg-orange-200" : "hover:bg-sky-200"}`}>
+        <li>
           <PostItem post={post}/>
         </li>
       ))
     }
   </ul>
 </section>
+
+<style>
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+</style>

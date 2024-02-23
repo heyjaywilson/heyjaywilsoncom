@@ -2,7 +2,6 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../../styles/global.css';
-
 interface Props {
 	metaTitle: string;
 	title: string;
@@ -13,8 +12,6 @@ interface Props {
 
 const { metaTitle, title, description, image = '/heyjaywilson.png', canonicalURL } = Astro.props;
 
-
-const canonURL = new URL(canonicalURL ?? Astro.url.pathname, Astro.site);
 ---
 
 <!-- Global Metadata -->
@@ -23,8 +20,10 @@ const canonURL = new URL(canonicalURL ?? Astro.url.pathname, Astro.site);
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
+{canonicalURL && 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonURL} />
+<link rel="canonical" href={canonicalURL} />
+}
 
 <!-- Webmentions -->
 <link rel="webmention" href="https://webmention.io/heyjaywilson.com/webmention" />
