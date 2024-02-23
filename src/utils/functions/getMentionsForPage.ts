@@ -35,7 +35,6 @@ const getMentionsForPage = async (slug: string) => {
   } else {
     let mentions = containerMentions[0].filter((a) => a.wmPrivate != true);
     data.allMentions = mentions;
-    console.log(data.allMentions)
     data.replies = mentions.filter(
       (a) => a.wmProperty == enums.wmProperty.enum["in-reply-to"]
     );

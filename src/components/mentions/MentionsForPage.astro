@@ -81,7 +81,6 @@ console.log(allMentions.length)
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       if (button instanceof HTMLElement) {
-      console.log(button.dataset.wm);
       let buttonPushed: string = button.dataset.wm ?? "";
       switch (buttonPushed) {
         case "replies":
