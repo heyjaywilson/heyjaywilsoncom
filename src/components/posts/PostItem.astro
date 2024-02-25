@@ -1,9 +1,9 @@
 ---
-import { type CollectionEntry } from 'astro:content';
-import { PostTypeEnum } from '../../utils/types/Post';
-import FormattedDate from '../FormattedDate.astro';
+import { type CollectionEntry } from "astro:content";
+import { PostTypeEnum } from "../../utils/types/Post";
+import FormattedDate from "../FormattedDate.astro";
 interface Props {
-    post: CollectionEntry<"blog">;
+  post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
@@ -29,21 +29,27 @@ switch (post.data.type) {
   default:
     break;
 }
-
 ---
 
 <a href={`/blog/${post.slug}`} class="md:flex md:mb-8 text-slate-950 items-top">
-  <i class={`${icon} pt-2`}></i>
-  <div class="pl-4 pb-4 md:py-0 flex-grow">
-    <h3 class="text-lg font-bold pb-0">{post.data.title}</h3>
-    <p class="p-0 font-mono text-sm"><FormattedDate date={post.data.pubDate}/></p>
-    <p class="p-0">{post.data.description}</p>
+  <i class={`${icon} pt-2 hidden md:inline-block`}></i>
+  <div class="px-4 pt-2 pb-4 md:py-0 flex-grow flex">
+    <i class={`${icon} pt-2 pr-2 md:hidden`}></i>
+    <div>
+      <h3 class="text-lg font-bold pb-0">{post.data.title}</h3>
+      <p class="p-0 font-mono text-sm">
+        <FormattedDate date={post.data.pubDate} />
+      </p>
+      <p class="p-0">{post.data.description}</p>
+    </div>
   </div>
-    {post.data.heroImage && (
+  {
+    post.data.heroImage && (
       <img
         src={post.data.heroImage}
         alt=""
-        class="rounded-t-md md:rounded-none w-full md:w-32 md:h-full"
+        class="rounded-b-md md:rounded-none w-full md:w-32 md:h-full"
       />
-    )}
-  </a>
+    )
+  }
+</a>
