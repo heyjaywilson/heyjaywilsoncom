@@ -15,6 +15,7 @@ const blog = defineCollection({
     videoID: z.string().optional(),
     isFeatured: z.boolean().optional(),
     includeBMC: z.boolean().default(true),
+    type: z.string().default("note"),
     tags: z.array(z.string()).default(["other"]),
   }),
 });
