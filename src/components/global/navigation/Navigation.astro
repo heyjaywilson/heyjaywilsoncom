@@ -1,0 +1,26 @@
+---
+import NavigationLinks from "./NavigationLinks.astro";
+---
+
+<header class="flex w-full max-w-3xl">
+  <div class="flex w-full justify-between items-center">
+    <div class="h-card">
+      <img
+        src="https://avatars.githubusercontent.com/u/19311157?v=4"
+        class="u-photo w-8 h-8 rounded-md"
+        alt="Jay as a memoji"
+      />
+      <span class="p-name">Jay Wilson</span>
+      <a rel="me" href="/" class="u-url hidden"></a>
+    </div>
+    <div class="hidden md:inline-block">
+      <NavigationLinks />
+    </div>
+  </div>
+</header>
+
+<style>
+  .h-card {
+    @apply flex grow md:grow-0 items-center gap-2 font-extrabold p-2 justify-center text-cyan-800;
+  }
+</style>

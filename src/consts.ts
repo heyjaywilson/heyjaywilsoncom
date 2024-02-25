@@ -25,3 +25,10 @@ export const SOCIAL_MEDIA = {
         fontAwesome: "fa-brands fa-threads"
     }
 }
+
+export const NAVIGATION_LOCATIONS = [
+    { link: "/", title: "Home", icon: "fa-house" },
+    { link: "/about", title: "About", icon: "fa-circle-i" },
+    { link: "/blog", title: "Archive", icon: "fa-rectangle-list" },
+    // { link: "/follow", title: "Follow", icon: "fa-briefcase" },
+  ];

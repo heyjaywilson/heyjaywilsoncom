@@ -1,0 +1,18 @@
+---
+import { NAVIGATION_LOCATIONS } from "../../../consts";
+import NavigationLink from "./NavigationLink.astro";
+---
+
+<nav>
+  <ul class="flex gap-4">
+    {
+      NAVIGATION_LOCATIONS.map((location) => (
+        <NavigationLink
+          icon={location.icon}
+          link={location.link}
+          label={location.title}
+        />
+      ))
+    }
+  </ul>
+</nav>
