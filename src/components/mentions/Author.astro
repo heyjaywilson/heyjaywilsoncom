@@ -2,24 +2,34 @@
 // Type import
 import { type WMAuthor } from "../../utils/types/Webmention";
 // Props
-interface Props  {
-  author: WMAuthor
+interface Props {
+  author: WMAuthor;
 }
 // Data massaging
-const author = Astro.props.author
+const author = Astro.props.author;
 ---
 
-<div>
-  <!--Name and photo -->
-  <div class="flex items-center gap-2">
-    {author.photo && (
-      <img src={author.photo} class="w-12"/>
-    )}
-    {author.name && (
-      <span>{author.name}</span>
-    )}
-   {author.url.length > 0 &&
-   <a href={author.url}><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-   }
-  </div>
+<!--Name and photo -->
+<div class="h-card">
+  {author.photo && <img src={author.photo} class="u-photo" />}
+  {author.name && <span class="p-name">{author.name}</span>}
+  {
+    author.url.length > 0 && (
+      <a href={author.url} class="u-url">
+        <i class="fa-solid fa-arrow-up-right-from-square" />
+      </a>
+    )
+  }
 </div>
+
+<style>
+  .h-card {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-025);
+  }
+  img {
+    width: var(--width-200);
+    border-radius: var(--border-radius-025);
+  }
+</style>

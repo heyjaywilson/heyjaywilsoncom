@@ -14,8 +14,25 @@ interface Props {
 // Data massaging
 const mention = Astro.props.mention;
 ---
-<div class="pb-8 flex flex-col gap-2">
+<div class="h-entry">
   <Author author={mention.author}/>
-  <div class="flex gap-4"><span class=" font-bold">{mention.name}</span><a href={mention.url}><i class="fa-solid fa-link"></i></a></div>
+  <div class="reply-info"><span class="mention-title">{mention.name}</span><a href={mention.url}><i class="fa-solid fa-link"></i></a></div>
   <div>{mention.content?.text}</div>
 </div>
+
+<style>
+  .h-entry {
+    padding-bottom: var(--padding-xxl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+  }
+  .reply-info {
+    display: flex;
+    gap: var(--gap-sm);
+  }
+  
+  .mention-title {
+    font-weight: bold;
+  }
+</style>

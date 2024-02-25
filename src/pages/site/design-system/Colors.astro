@@ -1,0 +1,68 @@
+---
+---
+
+<style>
+  .color-list {
+    display: flex;
+    gap: 2em;
+  }
+  .color-square {
+    width: 100px;
+    height: 100px;
+    border-radius: var(--border-radius-md);
+    position: relative;
+    display: flex;
+    align-items: end;
+  }
+  .color-square:hover .color-description {
+    visibility: visible;
+  }
+  .color-description {
+    width: 100%;
+    padding: var(--padding-md);
+    visibility: hidden;
+    display: block;
+    background-color: var(--neutral);
+    color: var(--neutral-inverse);
+    position: relative;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+  }
+  .brand-background {
+    background-color: var(--brand);
+  }
+  .secondary-background {
+    background-color: var(--secondary);
+  }
+  .tertiary-background {
+    background-color: var(--tertiary);
+  }
+  .neutral-background {
+    background-color: var(--neutral);
+  }
+  .neutral-inverse-background {
+    background-color: var(--neutral-inverse);
+    border: 2px solid var(--neutral);
+  }
+</style>
+
+<section id="colors">
+  <h2>Colors</h2>
+  <ul class="color-list">
+    <li class="color-square brand-background">
+      <span class="color-description">Primary / brand</span>
+    </li>
+    <li class="color-square secondary-background">
+      <span class="color-description">Secondary</span>
+    </li>
+    <li class="color-square tertiary-background">
+      <span class="color-description">Tertiary</span>
+    </li>
+    <li class="color-square neutral-background">
+      <span class="color-description">Neutral</span>
+    </li>
+    <li class="color-square neutral-inverse-background">
+      <span class="color-description">Neutral inverse</span>
+    </li>
+  </ul>
+</section>

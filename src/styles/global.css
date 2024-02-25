@@ -15,13 +15,26 @@
   --accent-font: "Roboto Mono Variable", monospace;
 
   /**NUMBERS**/
+  --border-radius-025: 0.25rem;
   --border-radius-md: 1rem;
+
   --padding-md: 0.25rem;
   --padding-lg: 0.75rem;
   --padding-xl: 1.5rem;
+  --padding-xxl: 2rem;
+  
+  --margin-lg: var(--padding-lg);
+  --margin-xl: var(--padding-xl);
+
+  --gap-025: 0.25rem;
   --gap-sm: 0.25rem;
   --gap-md: 1rem;
   --gap-lg: 2rem;
+
+  --width-200: 2rem;
+  --width-300: 3rem;
+  --width-325: 3.25rem;
+  --width-400: 4rem;
 }
 
 body {
@@ -58,7 +71,7 @@ li {
   display: block;
 }
 
-.dt-published {
+.dt-published, .dt-updated {
   font-family: var(--accent-font);
 }
 
@@ -124,4 +137,9 @@ nav {
 
 .hidden {
   display: none;
+}
+
+img {
+  width: 100%;
+  border-radius: var(--border-radius-md);
 }

@@ -13,12 +13,21 @@ let isValid = id !== undefined || embedURL !== undefined;
 
 {
   isValid ? (
-    <iframe class="w-full" height="415" src={source} />
+    <iframe height="415" src={source} />
   ) : (
     <div class="">
-      If you see this, the component is missing the <pre class="inline">id</pre>{" "}
-      or <pre class="inline">embed</pre>. Drop a comment below to let Jay know
+      If you see this, the component is missing the <pre>id</pre>{" "}
+      or <pre>embed</pre>. Drop a comment below to let Jay know
       cause he probably doesn't know this happened. 🤷‍♂️.
     </div>
   )
 }
+
+<style>
+  iframe {
+    width: 99%;
+  }
+  pre {
+    display: inline;
+  }
+</style>

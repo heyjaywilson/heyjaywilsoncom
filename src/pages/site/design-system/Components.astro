@@ -1,0 +1,38 @@
+---
+import YouTube from "../../../components/YouTube.astro";
+import Mention from "../../../components/mentions/Mention.astro";
+---
+
+<section>
+  <h2>Components</h2>
+  <Mention
+    mention={{
+      type: "entry",
+      author: {
+        type: "entry",
+        name: "Jay",
+        url: "https://heyjaywilson.com",
+        photo: "https://heyjaywilson.com/_astro/jaywilsonlaptop.f5e3a98e.png",
+      },
+      url: "https://heyjaywilson.com",
+      published: undefined,
+      wmReceived: undefined,
+      wmId: 1,
+      wmSource: "https://heyjaywilson.com",
+      wmTarget: "https://heyjaywilson.com",
+      name: "Name of entry",
+      content: {
+        html: "<p>This is some type of reply</p>",
+        text: "This is some type of reply"
+      },
+      inReplyTo: "https://heyjaywilson.com",
+      wmProperty: 'in-reply-to',
+      wmPrivate: false
+    }}
+  />
+  <details>
+    <summary>YouTube</summary>
+    <YouTube id="nYZo-SVYRo0" />
+    <YouTube />
+  </details>
+</section>

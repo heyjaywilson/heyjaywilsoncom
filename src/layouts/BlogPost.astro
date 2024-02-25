@@ -32,31 +32,31 @@ const {
   </head>
 
   <body>
+    <div class="container">
     <Navigation />
     <main>
-      <article class="px-2">
+      <article class="h-entry">
         <div>
           {
             heroImage && (
               <img
-                class="rounded-md mb-4 w-full h-auto"
                 src={heroImage}
-                alt=""
+                alt={`Image for ${metatitle ?? title}`}
               />
             )
           }
         </div>
         <!-- Article -->
         <div>
-          <div class="font-mono pb-4">
-            <h1>{title}</h1>
-            <p class="text-sm">{description}</p>
+          <div>
+            <h1 class="p-name">{title}</h1>
+            <p class="p-summary">{description}</p>
             <div class="text-xs flex gap-x-4">
-              <div>Published: <FormattedDate date={pubDate} /></div>
+              <div class="postDate">Published: <FormattedDate classList='dt-published' date={pubDate} /></div>
               {
                 updatedDate && (
                   <div>
-                    Last updated: <FormattedDate date={updatedDate} />
+                    Last updated: <FormattedDate classList='dt-updated' date={updatedDate} />
                   </div>
                 )
               }
@@ -69,15 +69,17 @@ const {
               )
             }
           </div>
-          <slot />
+          <div class="e-content">
+            <slot />
+          </div>
         </div>
-        <hr class="mt-4 my-2 border-slate-400 rounded-md border-1;" />
-        <div id="tags" class="py-4 flex flex-wrap">
+        <hr/>
+        <div id="tags">
           {
             tags.map((tag) => (
-              <span class="mr-4 font-mono">
+              <span>
                 <a href={`/tag/${tag}`} class="no-underline">
-                  <span class="font-bold">#</span>
+                  <span>#</span>
                   {tag}
                 </a>
               </span>
@@ -88,15 +90,7 @@ const {
 
       {
         includeBMC && (
-          <div class="text-center flex flex-col mb-8">
-            <p class="">
-              Thanks for reading! If you want these posts directly in your
-              inbox, then please{' '}
-              <a href="https://heyjaywilson.substack.com/subscribe?">
-                subscribe on Substack.
-              </a>
-            </p>
-            <>
+          <div id="#buymecoffee">
               <script
                 type="text/javascript"
                 src="https://storage.ko-fi.com/cdn/widget/Widget_2.js"
@@ -105,13 +99,32 @@ const {
                 kofiwidget2.init('Buy me a coffee', '#29abe0',
                 'W7W2FFDSW');kofiwidget2.draw();
               </script>
-            </>
           </div>
         )
       }
       <MentionsForPage />
     </main>
-
     <Footer />
+    </div>
   </body>
 </html>
+
+<style>
+  .postDate {
+    font-family: var(--accent-font);
+  }
+
+  #tags {
+    padding: var(--padding-lg) 0;
+    display: flex;
+    gap: var(--gap-md);
+  }
+
+  img {
+    margin-bottom: var(--margin-xl);
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+</style>
