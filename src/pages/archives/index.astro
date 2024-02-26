@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import PostTypeIcon from "../../components/posts/PostTypeIcon.astro"
+import { PostType } from "../../utils/types/PostType"
+import Default from "../../layouts/Default.astro"
+import getUniqueTags from "../../utils/functions/getUniqueTags";
+
+const nonDrafts = await getCollection("blog")
+let tags = getUniqueTags(nonDrafts);
+---
+
+<Default metatitle="Archives for HJW.com" title="The Archives" description="All posts from Jay">
+  <h1>The archives</h1>
+  <section id="post-types" class="py-6">
+    <p class=" font-mono font-extrabold uppercase pb-2">Post Types</p>
+    <ul class="grid grid-cols-3 gap-2">
+      <li><a href="/archives/articles" class=" text-slate-900"><PostTypeIcon type={PostType.article} classList="pr-2" />Articles</a></li>
+      <li><a href="/archives/notes" class=" text-slate-900"><PostTypeIcon type={PostType.note} classList="pr-2" />Note</a></li>
+      <li><a href="/archives/posts" class=" text-slate-900"><PostTypeIcon type={PostType.post} classList="pr-2" />Post</a></li>
+      <li><a href="/archives/likes" class=" text-slate-900"><PostTypeIcon type={PostType.like} classList="pr-2" />Like</a></li>
+      <li><a href="/archives/locations" class=" text-slate-900"><PostTypeIcon type={PostType.location} classList="pr-2" />Location</a></li>
+      <li><a href="/archives/photos" class=" text-slate-900"><PostTypeIcon type={PostType.photo} classList="pr-2" />Photos</a></li>
+    </ul>
+  </section>
+  <section id="tags" class="py-6">
+    <p class=" font-mono font-extrabold uppercase pb-2">Tags</p>
+    <ul class="grid grid-cols-3 gap-2">
+      {tags.map((tag) => (
+        <li><a href={`/tag/${tag}`} class="text-slate-900">#{tag}</a></li>
+      ))}
+    </ul>
+  </section>
+  <section id="months" class="py-6">
+    <p class=" font-mono font-extrabold uppercase pb-2">Months</p>
+    <ul>
+      <li></li>
+    </ul>
+  </section>
+</Default>

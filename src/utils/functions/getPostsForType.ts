@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from "astro:content";
-import { type PostType } from "../types/Post";
+import { PostType } from "../types/PostType";
 
-const getPostsForType = async (type: PostType) => {
+export const getPostsForType = async (type: PostType) => {
   const postsOfType: CollectionEntry<"blog">[] = (
     await getCollection("blog")
   ).filter((a) => isPostRightType(type, a));

@@ -1,0 +1,44 @@
+---
+import { PostType } from "../../utils/types/PostType";
+
+let icon = `fa-regular fa-newspaper`;
+let color = `text-orange-500`;
+
+interface Props {
+  type: PostType;
+  classList: string;
+}
+
+const { type, classList } = Astro.props;
+
+switch (type) {
+  case PostType.article:
+    icon = `fa-solid fa-newspaper`;
+    color = `text-orange-500`;
+    break;
+  case PostType.note:
+    icon = `fa-regular fa-note`;
+    color = `text-slate-500`;
+    break;
+  case PostType.post:
+    icon = `fa-solid fa-walkie-talkie`;
+    color = `text-blue-500`;
+    break;
+  case PostType.like:
+    icon = `fa-solid fa-heart`;
+    color = `text-red-500`;
+    break;
+  case PostType.location:
+    icon = `fa-solid fa-location-dot`;
+    color = `text-green-500`;
+    break;
+  case PostType.photo:
+    icon = `fa-solid fa-image`;
+    color = `text-purple-500`;
+    break;
+  default:
+    break;
+}
+---
+
+<i class={`${icon} ${color} ${classList}`}></i>

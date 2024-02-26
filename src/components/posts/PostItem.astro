@@ -1,40 +1,24 @@
 ---
 import { type CollectionEntry } from "astro:content";
-import { PostTypeEnum } from "../../utils/types/Post";
+import { PostType } from "../../utils/types/PostType";
 import FormattedDate from "../FormattedDate.astro";
+import PostTypeIcon from "./PostTypeIcon.astro";
+import type { string } from "astro/zod";
 interface Props {
   post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
 
-let icon = "fa-note";
+let type: string = post.data.type;
+let derivedType: PostType = type as PostType;
 
-switch (post.data.type) {
-  case PostTypeEnum.enum.note:
-    icon = "fa-regular fa-note text-slate-500";
-    break;
-  case PostTypeEnum.enum.article:
-    icon = "fa-regular fa-newspaper text-orange-500";
-    break;
-  case PostTypeEnum.enum.like:
-    icon = "fa-regular fa-heart text-red-500";
-    break;
-  case PostTypeEnum.enum.location:
-    icon = "fa-solid fa-location-dot text-green-500";
-    break;
-  case PostTypeEnum.enum.post:
-    icon = "fa-regular fa-walkie-talkie text-blue-500";
-    break;
-  default:
-    break;
-}
 ---
 
 <a href={`/blog/${post.slug}`} class="md:flex md:mb-8 text-slate-950 items-top">
-  <i class={`${icon} pt-2 hidden md:inline-block`}></i>
+  <PostTypeIcon type={derivedType} classList="pt-2 hidden md:inline-block"/>
   <div class="px-4 pt-2 pb-4 md:py-0 flex-grow flex">
-    <i class={`${icon} pt-2 pr-2 md:hidden`}></i>
+    <PostTypeIcon type={derivedType} classList="pt-2 pr-2 md:hidden"/>
     <div>
       <h3 class="text-lg font-bold pb-0">{post.data.title}</h3>
       <p class="p-0 font-mono text-sm">
