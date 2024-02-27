@@ -29,6 +29,9 @@ switch (post.data.type) {
   default:
     break;
 }
+
+const showDescription = post.data.title !== post.data.description
+
 ---
 
 <a href={`/blog/${post.slug}`} class="md:flex md:mb-8 text-slate-950 items-top">
@@ -40,7 +43,7 @@ switch (post.data.type) {
       <p class="p-0 font-mono text-sm">
         <FormattedDate date={post.data.pubDate} />
       </p>
-      <p class="p-0">{post.data.description}</p>
+      {showDescription ? <p class="p-0">{post.data.description}</p> : <></>}
     </div>
   </div>
   {

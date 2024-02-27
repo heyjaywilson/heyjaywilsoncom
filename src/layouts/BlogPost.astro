@@ -18,7 +18,11 @@ const {
   includeBMC,
   tags,
   canonicalURL,
+  type
 } = Astro.props;
+
+const showDescription = (type === "article")
+const showTitle = (type === "article")
 ---
 
 <html lang="en">
@@ -49,8 +53,8 @@ const {
         <!-- Article -->
         <div>
           <div class="font-mono pb-4">
-            <h1>{title}</h1>
-            <p class="text-sm">{description}</p>
+            {showTitle && <h1>{title}</h1>}
+            {showDescription && <p class="text-sm">{description}</p>}
             <div class="text-xs flex gap-x-4">
               <div>Published: <FormattedDate date={pubDate} /></div>
               {
