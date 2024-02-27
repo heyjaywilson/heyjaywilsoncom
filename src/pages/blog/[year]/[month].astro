@@ -1,0 +1,37 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+
+interface PostMonths {
+  month: number,
+  posts: CollectionEntry<"blog">[]
+}
+
+export async function getStaticPaths() {
+  const posts: CollectionEntry<"blog">[] = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  const postYears = new Map<number, PostMonths>();
+
+  for (let post of posts) {
+    const postDate: Date = post.data.pubDate;
+    const year = postDate.getFullYear();
+    const month = postDate.getMonth();
+
+    let valuesAtYear = postYears.get(year) ?? {month: 0, posts: []};
+    valuesAtYear.month = month
+    valuesAtYear.posts.push(post)
+
+    postYears.set(year, valuesAtYear);
+  }
+
+  return [...postYears.entries()].map(([year, months]) => ({
+    params: { year },
+    props: { months },
+  }));
+}
+
+const { year } = Astro.params;
+const { months } = Astro.props;
+---
+
+<h2>Hello {months.month}</h2>

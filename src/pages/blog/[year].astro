@@ -1,0 +1,48 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Default from "../../layouts/Default.astro";
+import PostItem from "../../components/posts/PostItem.astro";
+
+export async function getStaticPaths() {
+  const posts: CollectionEntry<"blog">[] = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+  const postYears = new Map<number, CollectionEntry<"blog">[]>();
+
+  for (let post of posts) {
+    const postDate: Date = post.data.pubDate;
+    const year = postDate.getFullYear();
+
+    let valuesAtYear = postYears.get(year) ?? [];
+    valuesAtYear.push(post);
+    postYears.set(year, valuesAtYear);
+  }
+
+  return [...postYears.entries()].map(([year, posts]) => ({
+    params: { year },
+    props: { posts },
+  }));
+}
+
+const { year } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Default
+  metatitle={`Posts for ${year}`}
+  title={`Posts for ${year}`}
+  description=""
+>
+  <h1>Posts in {year}</h1>
+  <section class="py-6">
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <PostItem post={post} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Default>
