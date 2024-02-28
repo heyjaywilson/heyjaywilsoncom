@@ -17,6 +17,7 @@ const blog = defineCollection({
     includeBMC: z.boolean().default(true),
     type: z.string().default("note"),
     tags: z.array(z.string()).default(["other"]),
+    mentions: z.array(z.string()).default([]),
   }),
 });
 
@@ -37,4 +38,20 @@ const webmentions = defineCollection({
   schema: z.array(webMention),
 });
 
-export const collections = { blog, workExperience, webmentions };
+const blogMentions = defineCollection({
+  type: "data",
+  schema: z.object({
+    name: z.string(),
+    website: z.string().optional(),
+    categories: z.array(z.string()).default([]),
+    rss: z.string().optional(),
+    youtube: z.string().optional(),
+    threads: z.string().optional(),
+    mastodon: z.string().optional(),
+    twitter: z.string().optional(),
+    instagram: z.string().optional(),
+    linkedin: z.string().optional(),
+  })
+});
+
+export const collections = { blog, workExperience, webmentions, blogMentions };
