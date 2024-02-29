@@ -17,5 +17,24 @@
     "likeOf": "https://heyjaywilson.com/blog/2024/02/28-testpost/",
     "wmProperty": "like-of",
     "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Maltese",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/6c2a252b475b7e2cf10ba8157ea540f30924cb7ee31a1112e30c8db7c5002951.jpg",
+      "url": "https://mastodon.world/@hallux"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112012894386321127#reblogged-by-111528225509283816",
+    "published": null,
+    "wmReceived": "2024-02-29T05:37:44Z",
+    "wmId": 1786728,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112012894386321127/111528225509283816",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/02/28-testpost/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/02/28-testpost/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
   }
 ]
