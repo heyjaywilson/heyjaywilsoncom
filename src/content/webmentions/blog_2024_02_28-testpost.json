@@ -1,0 +1,21 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Daniel Lyons",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/57677a321df85bcd545e6841c04a3e0269b06581834e73a9ef2427dc29e4288c.jpg",
+      "url": "https://iosdev.space/@dandylyons"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112012894386321127#favorited-by-109610097732597198",
+    "published": null,
+    "wmReceived": "2024-02-29T05:01:37Z",
+    "wmId": 1786708,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112012894386321127/109610097732597198",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/02/28-testpost/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/02/28-testpost/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  }
+]
