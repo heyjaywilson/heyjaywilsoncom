@@ -21,7 +21,7 @@ export const GET = async () => {
       link: `/blog/${post.slug}`,
       content: removeJSX(parser.render(post.body), post.data.videoID ?? ""),
       title: post.data.metatitle ?? post.data.title,
-      pubDate: post.data.updatedDate ?? post.data.pubDate,
+      pubDate: post.data.pubDate,
       author: `heyjay@cctplus.dev`,
       categories: [post.data.type]
     })),
