@@ -23,6 +23,7 @@ export const GET = async () => {
       title: post.data.metatitle ?? post.data.title,
       pubDate: post.data.updatedDate ?? post.data.pubDate,
       author: `heyjay@cctplus.dev`,
+      categories: [post.data.type]
     })),
   });
 };
