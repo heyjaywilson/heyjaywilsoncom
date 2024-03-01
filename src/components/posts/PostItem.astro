@@ -89,7 +89,7 @@ const showDescription = post.data.title !== post.data.description;
       ></span
     ><span
       ><i class="fa-regular fa-tags"></i>{
-        post.data.tags.map((tag) => <a href="/tags/${tag}">#{tag}</a>)
+        post.data.tags.map((tag) => <a href="/tags/${tag}" class="p-category pr-1">#{tag}</a>)
       }</span
     >
   </p>
