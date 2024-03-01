@@ -28,29 +28,66 @@ switch (post.data.type) {
     break;
 }
 
-const showDescription = post.data.title !== post.data.description
-
+const showDescription = post.data.title !== post.data.description;
 ---
 
-<a href={`/blog/${post.slug}`} class="md:flex md:mb-8 text-slate-950 items-top">
-  <i class={`${icon} pt-2 hidden md:inline-block`}></i>
-  <div class="px-4 pt-2 pb-4 md:py-0 flex-grow flex">
-    <i class={`${icon} pt-2 pr-2 md:hidden`}></i>
-    <div>
-      <h3 class="text-lg font-bold pb-0">{post.data.title}</h3>
-      <p class="p-0 font-mono text-sm">
-        <FormattedDate date={post.data.pubDate} />
-      </p>
-      {showDescription ? <p class="p-0">{post.data.description}</p> : <></>}
-    </div>
-  </div>
-  {
-    post.data.heroImage && (
-      <img
-        src={post.data.heroImage}
-        alt=""
-        class="rounded-b-md md:rounded-none w-full md:w-32 md:h-full"
-      />
-    )
+<style>
+  img {
+    @apply md:hidden;
   }
-</a>
+  
+  .h-entry {
+    @apply pb-4;
+  }
+  .p-name {
+    @apply pb-2 text-xl md:text-lg text-cyan-700 flex gap-2 underline underline-offset-4;
+  }
+
+  .post-image {
+    @apply rounded-md md:max-w-lg md:h-40 md:py-2;
+  }
+  .type {
+    @apply text-xs font-mono
+  }
+
+  .post-details {
+    @apply pt-2 text-xs flex gap-2 flex-wrap;
+  }
+</style>
+
+<div class="h-entry">
+  <!-- Entry -->
+  <div>
+    <span class="type"><i class={icon}></i>{` `}{post.data.type.toLocaleUpperCase()}</span>
+    <a href={`/blog/${post.slug}`} class="p-name u-url">{post.data.title}</a>
+    {
+      post.data.heroImage && (
+        <img
+          src={post.data.heroImage}
+          alt="Hero image for post. Not totally useful alt but the photo isn't really useful either"
+          class="post-image"
+        />
+      )
+    }
+    {showDescription ? <span>{post.data.description}</span> : <></>}
+  </div>
+  <!-- Post details -->
+  <p class="post-details">
+    <FormattedDate classList="dt-published" date={post.data.pubDate} /><span
+      ><a
+        class="p-author h-card font-mono text-neutral-900"
+        href="https://heyjaywilson.com"
+        rel="me"><i class="fa-solid fa-address-book"></i>Jay Wilson</a
+      ></span
+    ><span
+      ><i class="fa-regular fa-tags"></i>{
+        post.data.tags.map((tag) => (
+          <a href="/tags/${tag}">
+            #{tag}
+          </a>
+        ))
+      }</span
+    >
+  </p>
+  <hr/>
+</div>
