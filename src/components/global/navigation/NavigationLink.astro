@@ -8,15 +8,18 @@ interface Props {
 const { pathname } = Astro.url;
 const { link, label } = Astro.props;
 
-let isActive = false
+let isActive = false;
 
-let paths = pathname.split('/');
-let linkTextOnly = link.replace('/', '');
+let paths = pathname.split("/");
+let linkTextOnly = link.replace("/", "");
 
 if (paths.length > 1) {
-  isActive = paths[1] === linkTextOnly
+  isActive = paths[1] === linkTextOnly;
 }
-
 ---
 
-<a href={link} class={`${isActive ? ' text-green-600 font-bold' : 'text-cyan-600'} font-mono`}>{label}</a>
+<a
+  href={link}
+  class={`${isActive ? " text-green-600 font-bold" : "text-cyan-600"} font-mono`}
+  >{label}</a
+>

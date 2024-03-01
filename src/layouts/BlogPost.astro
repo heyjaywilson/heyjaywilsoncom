@@ -1,12 +1,12 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/site/BaseHead.astro';
-import Navigation from '../components/global/navigation/Navigation.astro';
-import Footer from '../components/global/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import MentionsForPage from '../components/mentions/MentionsForPage.astro';
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "../components/site/BaseHead.astro";
+import Navigation from "../components/global/navigation/Navigation.astro";
+import Footer from "../components/global/Footer.astro";
+import FormattedDate from "../components/FormattedDate.astro";
+import MentionsForPage from "../components/mentions/MentionsForPage.astro";
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<"blog">["data"];
 
 const {
   metatitle,
@@ -18,11 +18,11 @@ const {
   includeBMC,
   tags,
   canonicalURL,
-  type
+  type,
 } = Astro.props;
 
-const showDescription = (type === "article")
-const showTitle = (type === "article")
+const showDescription = type === "article";
+const showTitle = type === "article";
 ---
 
 <html lang="en">
@@ -31,7 +31,7 @@ const showTitle = (type === "article")
       metaTitle={metatitle ?? title}
       title={title}
       description={description}
-      image={heroImage ?? '/blog-placeholder-2.jpg'}
+      image={heroImage ?? "/blog-placeholder-2.jpg"}
     />
   </head>
 
@@ -95,7 +95,7 @@ const showTitle = (type === "article")
           <div class="text-center flex flex-col mb-8">
             <p class="">
               Thanks for reading! If you want these posts directly in your
-              inbox, then please{' '}
+              inbox, then please{" "}
               <a href="https://heyjaywilson.substack.com/subscribe?">
                 subscribe on Substack.
               </a>

@@ -2,7 +2,9 @@
 import NavLink from "./NavLink.astro";
 ---
 
-<header class="flex flex-col justify-center my-4 pl-4 lg:px-4 text-xl lg:max-w-xs">
+<header
+  class="flex flex-col justify-center my-4 pl-4 lg:px-4 text-xl lg:max-w-xs"
+>
   <!-- NAME -->
   <div class="flex gap-x-4">
     <img
@@ -26,22 +28,36 @@ import NavLink from "./NavLink.astro";
       </NavLink>
     </div>
     <div class="font-mono">
-      <NavLink href="/blog" class="text-slate-900 hover:text-cyan-600 no-underline">
+      <NavLink
+        href="/blog"
+        class="text-slate-900 hover:text-cyan-600 no-underline"
+      >
         Blog
       </NavLink>
     </div>
     <div class="font-mono">
-      <NavLink href="/about" class="text-slate-900 hover:text-cyan-600 no-underline">
+      <NavLink
+        href="/about"
+        class="text-slate-900 hover:text-cyan-600 no-underline"
+      >
         About
       </NavLink>
     </div>
   </nav>
   <div class="hidden lg:flex gap-4 lg:pt-8">
-    <a href="/rss.xml" target=”_blank”><i class="fa-solid fa-square-rss text-orange-600 hover:text-cyan-500"></i></a>
-    <a href="https://instagram.com/heyjaywilson" target=”_blank”><i class="fa-brands fa-instagram ml-4 text-cyan-600"></i></a>
-    <a href="https://www.threads.net/@heyjaywilson" target="_blank"><i class="fa-brands fa-threads text-cyan-600"></i></a>
-    <a href="https://ko-fi.com/heyjaywilson" target="_blank"><i class="fa-regular fa-mug-hot text-cyan-600"></i></a>
-
+    <a href="/rss.xml" target="”_blank”"
+      ><i class="fa-solid fa-square-rss text-orange-600 hover:text-cyan-500"
+      ></i></a
+    >
+    <a href="https://instagram.com/heyjaywilson" target="”_blank”"
+      ><i class="fa-brands fa-instagram ml-4 text-cyan-600"></i></a
+    >
+    <a href="https://www.threads.net/@heyjaywilson" target="_blank"
+      ><i class="fa-brands fa-threads text-cyan-600"></i></a
+    >
+    <a href="https://ko-fi.com/heyjaywilson" target="_blank"
+      ><i class="fa-regular fa-mug-hot text-cyan-600"></i></a
+    >
   </div>
   <!-- IMPLEMENT LATER -->
   <!-- <div class="hidden lg:flex lg:flex-col lg:pt-8">

@@ -27,19 +27,19 @@ const { metatitle, title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <style is:global>
+      hr {
+        @apply my-4;
+      }
+      .callout > p {
+        @apply text-xs;
+      }
+      .about-list > li > p > a {
+        @apply text-cyan-600 underline underline-offset-4;
+      }
+      .about-page > p > a {
+        @apply text-cyan-600 underline underline-offset-4;
+      }
+    </style>
   </body>
-  <style is:global>
-    hr {
-      @apply my-4;
-    }
-    .callout > p {
-      @apply text-xs;
-    }
-    .about-list > li > p > a {
-      @apply text-cyan-600 underline underline-offset-4;
-    }
-    .about-page > p > a {
-      @apply text-cyan-600 underline underline-offset-4;
-    }
-  </style>
 </html>

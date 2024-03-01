@@ -51,7 +51,7 @@ const blogMentions = defineCollection({
     twitter: z.string().optional(),
     instagram: z.string().optional(),
     linkedin: z.string().optional(),
-  })
+  }),
 });
 
 export const collections = { blog, workExperience, webmentions, blogMentions };

@@ -5,13 +5,13 @@ interface Props {
   limit?: number;
 }
 
-const {limit} = Astro.props;
-let posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const { limit } = Astro.props;
+let posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 if (limit) {
   posts = posts.slice(0, limit);
 }
-
 ---
 
 <section>
@@ -20,7 +20,7 @@ if (limit) {
     {
       posts.map((post) => (
         <li class={`my-6 md:my-2`}>
-          <PostItem post={post}/>
+          <PostItem post={post} />
         </li>
       ))
     }

@@ -5,6 +5,7 @@
 Here's my personal website. It's different than cctplus.dev due to what I post. [CCTPlus.dev](https://cctplus.dev) is more targeted for coding related content. This is more of an aggregate for all my content including vlogs turned blogs and extra pages I want to share.
 
 Powered by Astro. Here's some stuff Astro added to the readme that seems useful to keep
+
 ## Features:
 
 - ✅ Minimal styling (make it your own!)

@@ -14,7 +14,7 @@ const featuredPosts = (await getCollection("blog"))
     {
       featuredPosts.map((post) => (
         <li class="my-6 md:my-2">
-          <PostItem post={post}/>
+          <PostItem post={post} />
         </li>
       ))
     }

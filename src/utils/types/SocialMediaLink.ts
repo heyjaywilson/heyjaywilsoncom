@@ -1,5 +1,5 @@
 interface SocialMediaLink {
-    fontAwesome: string;
-    name: string;
-    link: URL;
+  fontAwesome: string;
+  name: string;
+  link: URL;
 }

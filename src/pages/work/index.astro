@@ -3,20 +3,27 @@ import FormattedDate from "../../components/FormattedDateNoDay.astro";
 import { getCollection } from "astro:content";
 import Default from "../../layouts/Default.astro";
 
-const workExp = (await getCollection("workExperience")).sort(
-  (a, b) => (b.data.startDate.valueOf() - a.data.startDate.valueOf())
-).sort(
-  (a, b) => ((b.data.isPresent.valueOf() ? 1 : 0)  - (a.data.isPresent.valueOf() ? 1 : 0 ))
-);
+const workExp = (await getCollection("workExperience"))
+  .sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
+  .sort(
+    (a, b) =>
+      (b.data.isPresent.valueOf() ? 1 : 0) -
+      (a.data.isPresent.valueOf() ? 1 : 0),
+  );
 ---
 
-<Default metatitle="Work experience" title="Work Experience" description="Some places I've worked.">
+<Default
+  metatitle="Work experience"
+  title="Work Experience"
+  description="Some places I've worked."
+>
   <main>
     <section>
       <h1>Work</h1>
       <p>Work I've done over the years.</p>
       <div class="text-xs pt-4">
-        <i class="fa-solid fa-badge-check text-emerald-500"></i> Currently working there
+        <i class="fa-solid fa-badge-check text-emerald-500"></i> Currently working
+        there
       </div>
     </section>
     <section>
@@ -25,15 +32,24 @@ const workExp = (await getCollection("workExperience")).sort(
           workExp.map((work) => (
             <li class="mb-8 md:mb-4 p-4 md:p-0 rounded-md shadow-md bg-slate-200 md:shadow-none md:bg-inherit">
               <div class="flex justify-between md:justify-normal md:gap-x-2">
-                <a href={work.data.website} class="font-bold underline" target="_blank">{work.data.employer}</a>
-                {work.data.isPresent &&
-                  <i class="fa-solid fa-badge-check text-emerald-500"></i>
-                }
+                <a
+                  href={work.data.website}
+                  class="font-bold underline"
+                  target="_blank"
+                >
+                  {work.data.employer}
+                </a>
+                {work.data.isPresent && (
+                  <i class="fa-solid fa-badge-check text-emerald-500" />
+                )}
               </div>
-              <p class="font-bold"><i class={`fa-regular ${work.data.icon} pr-2`}></i>{work.data.position}</p>
+              <p class="font-bold">
+                <i class={`fa-regular ${work.data.icon} pr-2`} />
+                {work.data.position}
+              </p>
               <p class="text-sm">
-                <i class="fa-regular fa-calendar pr-2"></i>
-                <FormattedDate date={work.data.startDate}/>
+                <i class="fa-regular fa-calendar pr-2" />
+                <FormattedDate date={work.data.startDate} />
                 <i class="fa-regular fa-arrow-right px-4" />
                 {work.data.endDate ? (
                   <FormattedDate date={work.data.endDate} />
