@@ -1,12 +1,13 @@
 ---
 interface Props {
   date: Date;
+  classList: string;
 }
 
-const { date } = Astro.props;
+const { date, classList } = Astro.props;
 ---
 
-<time datetime={date.toISOString()}>
+<time class={classList} datetime={date.toISOString()}>
   {
     date.toLocaleDateString("en-us", {
       year: "numeric",

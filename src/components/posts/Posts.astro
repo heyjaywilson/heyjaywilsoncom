@@ -5,22 +5,22 @@ interface Props {
   limit?: number;
 }
 
-const {limit} = Astro.props;
-let posts = (await getCollection("blog"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+const { limit } = Astro.props;
+let posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 if (limit) {
   posts = posts.slice(0, limit);
 }
-
 ---
 
 <section>
   <h2>Most Recent Posts</h2>
-  <ul>
+  <ul class="h-feed">
     {
       posts.map((post) => (
-        <li class={`my-6 md:my-2 transition ease-in-out duration-300 ${post.data.isFeatured ? "bg-orange-200" : "bg-sky-200"} md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none ${post.data.isFeatured ? "hover:bg-orange-200" : "hover:bg-sky-200"}`}>
-          <PostItem post={post}/>
+        <li class={`my-6 md:my-2`}>
+          <PostItem post={post} />
         </li>
       ))
     }

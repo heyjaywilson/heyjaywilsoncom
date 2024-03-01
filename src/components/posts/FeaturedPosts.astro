@@ -10,11 +10,11 @@ const featuredPosts = (await getCollection("blog"))
 
 <section>
   <h2>Featured post</h2>
-  <ul>
+  <ul class="h-feed">
     {
       featuredPosts.map((post) => (
-        <li class="my-6 md:my-2 bg-orange-200 md:bg-inherit rounded-md md:rounded-none shadow-sm md:shadow-none hover:bg-orange-200 transition ease-in-out duration-300">
-          <PostItem post={post}/>
+        <li class="my-6 md:my-2">
+          <PostItem post={post} />
         </li>
       ))
     }

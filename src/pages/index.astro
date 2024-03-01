@@ -5,8 +5,6 @@ import Footer from "../components/global/Footer.astro";
 import FeaturedPosts from "../components/posts/FeaturedPosts.astro";
 import Posts from "../components/posts/Posts.astro";
 ---
-
-<!doctype html>
 <html lang="en">
   <head>
     <BaseHead
@@ -16,26 +14,54 @@ import Posts from "../components/posts/Posts.astro";
     />
   </head>
   <body>
-    <Navigation/>
+    <Navigation />
     <main>
-      <section id="intro">
+      <section id="intro" class="h-card">
         <h1>Hey! I'm Jay</h1>
         <p class="text-justify">
-          I'm Jay, a <a href="https://github.com/heyjaywilson" target="_blank"
-            >software engineer</a
-          > and <a href="https://geni.us/jayIG">content creator</a> sharing the
-          ins and outs of my journey through life as I drink coffee.
+          I'm <a
+            href="https://heyjaywilson.com"
+            class="p-name u-url text-slate-900">Jay Wilson</a
+          >
+          <span class="p-pronouns font-mono text-xs">(he/him)</span>, a <a
+            href="https://github.com/heyjaywilson"
+            target="_blank">software engineer</a
+          > and <a href="https://geni.us/jayIG">content creator</a> sharing the ins
+          and outs of my journey through life as I drink coffee.
         </p>
         <p class="text-justify">
-          This site is treated more as a digital garden than a blog. I still
-          present posts chronologically but they might not be fully
-          fleshed out and be closer to thoughts.
+          I use this site as a way to blog about what I'm learning, information
+          about projects, and as my hub to my life on the internet. I am
+          embracing the <a href="https://indieweb.org/why">IndieWeb movement</a>
+          by controlling my experience on the web as much as possible.
+        </p>
+        <p>
+          Here are some other pages you might find interesting:
+          <ul class="py-2">
+            <li>My <a href="/blog/2023/11/01-readme">readme</a></li>
+            <li>My <a href="/work">work experience</a></li>
+            <li>
+              <a href="https://heyjay.omg.lol/now">Now</a> page
+            </li>
+            <li><a href="https://heyjay.paste.lol">Pastebin</a></li>
+          </ul>
         </p>
       </section>
-      <FeaturedPosts />
-      <Posts limit={5} />
+      <Posts limit={10} />
     </main>
     <Footer />
     <p class="hidden">proven82e4ed</p>
   </body>
 </html>
+
+<style>
+  ul {
+    @apply ms-8 list-outside list-disc p-2;
+  }
+  li {
+    @apply py-1;
+  }
+  a {
+    @apply font-mono underline underline-offset-4;
+  }
+</style>

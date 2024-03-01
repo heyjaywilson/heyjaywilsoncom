@@ -3,6 +3,7 @@ import { getMentionsForPage } from "../../utils/functions/getMentionsForPage";
 // Component imports
 import Mention from "./Mention.astro";
 import AuthorImage from "./AuthorImage.astro";
+import EmptyReplies from "./EmptyReplies.astro";
 
 const { allMentions, bookmarks, reposts, likes, replies } =
   await getMentionsForPage(Astro.url.pathname);
@@ -16,7 +17,7 @@ const ids = {
   rsvp: "rsvpList",
 };
 
-console.log(allMentions.length)
+console.log(allMentions.length);
 ---
 
 <script>
@@ -81,28 +82,29 @@ console.log(allMentions.length)
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       if (button instanceof HTMLElement) {
-      console.log(button.dataset.wm);
-      let buttonPushed: string = button.dataset.wm ?? "";
-      switch (buttonPushed) {
-        case "replies":
-          showReplies();
-          break;
-        case "reposts":
-          showReposts();
-          break;
-        case "likes":
-          showLikes();
-          break;
-        case "bookmarks":
-          showBookmarks();
-        default:
-          break;
+        console.log(button.dataset.wm);
+        let buttonPushed: string = button.dataset.wm ?? "";
+        switch (buttonPushed) {
+          case "replies":
+            showReplies();
+            break;
+          case "reposts":
+            showReposts();
+            break;
+          case "likes":
+            showLikes();
+            break;
+          case "bookmarks":
+            showBookmarks();
+          default:
+            break;
+        }
       }
-  }});
+    });
   });
 </script>
 
-<div class=" bg-orange-400 bg-opacity-20 p-4 rounded-md">
+<div class="bg-orange-400 bg-opacity-20 p-4 rounded-md">
   <div class="flex gap-8">
     <button data-wm="replies">
       <span class="flex gap-2 items-baseline">
@@ -127,15 +129,21 @@ console.log(allMentions.length)
     </button>
     <button data-wm="bookmarks">
       <span class="flex gap-2 items-baseline"
-        ><i class=`${bookmarks.length > 0 ? 'fa-solid' : 'fa-regular'} fa-bookmark`></i>
+        ><i
+          class=`${bookmarks.length > 0 ? 'fa-solid' : 'fa-regular'} fa-bookmark`
+        ></i>
         <span>{bookmarks.length}</span></span
       >
     </button>
   </div>
   <div id={`${ids.replies}`} class="showMentionBlock">
-    { replies.length == 0 ? <p>No comments yet. Share on mastodon and see your comment or write a post on your blog if you support <a href="https://indieweb.org/Webmention">Webmentions</a></p> :<></>
+    {
+      replies.length == 0 ? (
+        <EmptyReplies />
+      ) : (
+        replies.map((reply) => <Mention mention={reply} />)
+      )
     }
-    {replies.map((reply) => <Mention mention={reply} />)}
   </div>
   <div id={`${ids.reposts}`} class="hide">
     <p>
@@ -153,10 +161,13 @@ console.log(allMentions.length)
   </div>
   <div id={`${ids.bookmarks}`} class="hide">
     <p>
-      These people bookmarked this post on various platforms around the internet.
+      These people bookmarked this post on various platforms around the
+      internet.
     </p>
     {bookmarks.map((reply) => <AuthorImage mention={reply} />)}
   </div>
 
-  <div class="font-mono text-slate-700 text-xs mt-4">Powered by Webmentions</div>
+  <div class="font-mono text-slate-700 text-xs mt-4">
+    Powered by Webmentions
+  </div>
 </div>

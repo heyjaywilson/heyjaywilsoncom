@@ -13,9 +13,8 @@ interface WebMentionData {
 
 const getMentionsForPage = async (slug: string) => {
   let formattedSlug = formatSlugToID(slug);
-  let allMentions: CollectionEntry<"webmentions">[] = await getCollection(
-    "webmentions"
-  );
+  let allMentions: CollectionEntry<"webmentions">[] =
+    await getCollection("webmentions");
 
   let containerMentions: WebMention[][] = allMentions
     .filter((a) => a.id === formattedSlug)
@@ -35,24 +34,24 @@ const getMentionsForPage = async (slug: string) => {
   } else {
     let mentions = containerMentions[0].filter((a) => a.wmPrivate != true);
     data.allMentions = mentions;
-    console.log(data.allMentions)
+    console.log(data.allMentions);
     data.replies = mentions.filter(
-      (a) => a.wmProperty == enums.wmProperty.enum["in-reply-to"]
+      (a) => a.wmProperty == enums.wmProperty.enum["in-reply-to"],
     );
     data.likes = mentions.filter(
-      (a) => a.wmProperty == enums.wmProperty.enum["like-of"]
+      (a) => a.wmProperty == enums.wmProperty.enum["like-of"],
     );
     data.reposts = mentions.filter(
-      (a) => a.wmProperty == enums.wmProperty.enum["repost-of"]
+      (a) => a.wmProperty == enums.wmProperty.enum["repost-of"],
     );
     data.bookmarks = mentions.filter(
-      (a) => a.wmProperty == enums.wmProperty.enum["bookmark-of"]
+      (a) => a.wmProperty == enums.wmProperty.enum["bookmark-of"],
     );
     data.mentions = mentions.filter(
-      (a) => a.wmProperty == enums.wmProperty.enum["mention-of"]
+      (a) => a.wmProperty == enums.wmProperty.enum["mention-of"],
     );
     data.rsvp = mentions.filter(
-      (a) => a.wmProperty == enums.wmProperty.enum.rsvp
+      (a) => a.wmProperty == enums.wmProperty.enum.rsvp,
     );
     return data;
   }
