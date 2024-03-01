@@ -1,0 +1,21 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Maltese",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/6c2a252b475b7e2cf10ba8157ea540f30924cb7ee31a1112e30c8db7c5002951.jpg",
+      "url": "https://mastodon.world/@hallux"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112012912462393917#favorited-by-111528225509283816",
+    "published": null,
+    "wmReceived": "2024-02-29T05:37:45Z",
+    "wmId": 1786729,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112012912462393917/111528225509283816",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/02/28-netlify-to-website/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/02/28-netlify-to-website/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  }
+]
