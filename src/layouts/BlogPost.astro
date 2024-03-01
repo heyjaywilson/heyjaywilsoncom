@@ -32,35 +32,25 @@ const showTitle = type === "article";
       title={title}
       description={description}
       image={heroImage ?? "/blog-placeholder-2.jpg"}
+      canonicalURL={canonicalURL}
     />
   </head>
 
   <body>
     <Navigation />
-    <main>
-      <article class="px-2">
-        <div>
-          {
-            heroImage && (
-              <img
-                class="rounded-md mb-4 w-full h-auto"
-                src={heroImage}
-                alt=""
-              />
-            )
-          }
-        </div>
+    <main class="page-padding">
+      <article class="h-entry">
         <!-- Article -->
         <div>
-          <div class="font-mono pb-4">
-            {showTitle && <h1>{title}</h1>}
-            {showDescription && <p class="text-sm">{description}</p>}
-            <div class="text-xs flex gap-x-4">
-              <div>Published: <FormattedDate date={pubDate} /></div>
+          <div class="font-mono pb-4 text-xs">
+            {showTitle && <h1 class="p-name">{title}</h1>}
+            {showDescription && <p class="p-summary text-sm">{description}</p>}
+            <div class="flex gap-x-4">
+              <div>Published: <FormattedDate classList="dt-published" date={pubDate} /></div>
               {
                 updatedDate && (
                   <div>
-                    Last updated: <FormattedDate date={updatedDate} />
+                    Last updated: <FormattedDate classList="dt-updated" date={updatedDate} />
                   </div>
                 )
               }
@@ -68,7 +58,7 @@ const showTitle = type === "article";
             {
               canonicalURL && (
                 <blockquote class="italic bg-transparent border-orange-800 text-slate-600">
-                  Originally posted <a href={canonicalURL}>here</a>
+                  Originally posted <a href={canonicalURL} class="u-syndication">here</a>
                 </blockquote>
               )
             }
@@ -80,7 +70,7 @@ const showTitle = type === "article";
           {
             tags.map((tag) => (
               <span class="mr-4 font-mono">
-                <a href={`/tag/${tag}`} class="no-underline">
+                <a href={`/tag/${tag}`} class="p-category no-underline">
                   <span class="font-bold">#</span>
                   {tag}
                 </a>
@@ -90,15 +80,16 @@ const showTitle = type === "article";
         </div>
       </article>
 
+      <hr class="mt-4 my-2 border-slate-400 rounded-md border-1;" />
+
+      <div class="h-card">
+        <p><a href="/" class="p-name u-url text-slate-900"><i class="fa-solid fa-address-book"></i> Jay Wilson<a/></p>
+      </div>
       {
         includeBMC && (
-          <div class="text-center flex flex-col mb-8">
-            <p class="">
-              Thanks for reading! If you want these posts directly in your
-              inbox, then please{" "}
-              <a href="https://heyjaywilson.substack.com/subscribe?">
-                subscribe on Substack.
-              </a>
+          <div class="text-center flex flex-col items-center mb-8">
+            <p class="w-1/2">
+              Thanks for reading! If you found this post useful consider buying me a coffee, so I can keep making posts like this.
             </p>
             <>
               <script
@@ -117,39 +108,44 @@ const showTitle = type === "article";
     </main>
 
     <Footer />
-    <style is:global>
-      h1 {
-        @apply text-6xl;
-      }
-      h2 {
-        @apply pt-4;
-      }
-      h3 {
-        @apply pt-2 pb-1;
-      }
-      p {
-        @apply py-2;
-      }
-      ul {
-        @apply list-disc list-outside p-2 ms-8;
-      }
-      blockquote {
-        @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
-      }
-
-      blockquote > p {
-        @apply py-1;
-      }
-      blockquote > p > strong {
-        @apply font-bold font-mono;
-      }
-
-      hr {
-        @apply my-2 border-cyan-800 rounded-md border-2;
-      }
-      pre {
-        @apply p-8 rounded-md;
-      }
-    </style>
   </body>
 </html>
+
+<style is:global>
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply pt-4;
+  }
+  h3 {
+    @apply pt-2 pb-1;
+  }
+  p {
+    @apply py-2;
+  }
+  ul {
+    @apply list-disc list-outside p-2 ms-8;
+  }
+  blockquote {
+    @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
+  }
+
+  blockquote > p {
+    @apply py-1;
+  }
+  blockquote > p > strong {
+    @apply font-bold font-mono;
+  }
+
+  hr {
+    @apply my-2 border-cyan-800 rounded-md border-2;
+  }
+  pre {
+    @apply p-8 rounded-md;
+  }
+
+  .page-padding {
+    @apply px-2 mt-8;
+  }
+</style>
