@@ -1,0 +1,40 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Eric DeLabar",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/ca82d56fb71782d31977283ad1a64c59cf05640c4d82e584b9b69b8364c34a85.jpg",
+      "url": "https://mastodon.social/@edelabar"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112032785958519215#favorited-by-109506842283256922",
+    "published": null,
+    "wmReceived": "2024-03-03T18:17:20Z",
+    "wmId": 1788688,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112032785958519215/109506842283256922",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/03/03-old-fashioned-espresso/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/03/03-old-fashioned-espresso/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "thatvirtualboy :verified:",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/5c99f3ee4d3e36a684fefe2a3092415a402f2acb8372c46b967b106cac7f8fee.jpg",
+      "url": "https://techhub.social/@thatvirtualboy"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112032785958519215#favorited-by-109750825549675602",
+    "published": null,
+    "wmReceived": "2024-03-03T18:17:20Z",
+    "wmId": 1788689,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112032785958519215/109750825549675602",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/03/03-old-fashioned-espresso/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/03/03-old-fashioned-espresso/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  }
+]
