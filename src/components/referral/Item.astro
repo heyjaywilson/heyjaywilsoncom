@@ -1,0 +1,16 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+interface Props {
+  referral: CollectionEntry<"referrals">
+}
+
+const { referral } = Astro.props;
+const { Content } = await referral.render()
+
+const link: string = referral.data.link;
+---
+<div>
+  <h2><a href={link}>{referral.data.name}<i class="fa-solid fa-arrow-up-right-from-square pl-4"></i></a></h2>
+  <div class="pb-4"><Content /></div>
+</div>
