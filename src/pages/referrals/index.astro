@@ -8,8 +8,6 @@ let referrals: Array<CollectionEntry> = (await getCollection("referrals"))
 .sort(
   (a, b) => b.data.dateAdded.valueOf() - a.data.dateAdded.valueOf(),
 );
-
-console.log(referrals)
 ---
 
 <Default
