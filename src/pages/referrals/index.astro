@@ -4,7 +4,7 @@ import AffiliateDisclaimer from "../../components/AffiliateDisclaimer.astro";
 import { type CollectionEntry, getCollection } from "astro:content";
 import Item from "../../components/referral/Item.astro";
 
-let referrals: Array<CollectionEntry> = (await getCollection("referrals"))
+let referrals: Array<CollectionEntry<"referrals">> = (await getCollection("referrals"))
 .sort(
   (a, b) => b.data.dateAdded.valueOf() - a.data.dateAdded.valueOf(),
 );
