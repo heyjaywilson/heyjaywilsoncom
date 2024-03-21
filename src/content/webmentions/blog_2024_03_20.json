@@ -1,0 +1,21 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jeff C. ????????",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/b05ef1d6701efa50c9bfed8b2c359f91b85fa762ec480b9776ee542d656340c4.png",
+      "url": "https://indieweb.social/@jeff"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112131599903090626#favorited-by-109307248279778310",
+    "published": null,
+    "wmReceived": "2024-03-21T08:43:45Z",
+    "wmId": 1796031,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112131599903090626/109307248279778310",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/03/20/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/03/20/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  }
+]
