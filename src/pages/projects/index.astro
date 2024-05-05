@@ -1,0 +1,23 @@
+---
+import Default from "../../layouts/Default.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+import Item from "../../components/projects/Item.astro";
+
+let projects: Array<CollectionEntry<"projects">> = (await getCollection("projects"))
+---
+
+<Default
+  title="Projects"
+  metatitle="Projects"
+  description="Here's what I'm doing outside of work"
+>
+  <h1>Projects</h1>
+  <p>Here's what I'm doing outside of work</p>
+  <ul>
+      {projects.map((project)=> (
+        <li class="py-2 mb-4">
+          <a href={project.slug}><Item project={project} /></a>
+        </li>
+      ))}
+  </ul>
+</Default>

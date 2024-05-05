@@ -1,6 +1,5 @@
 import { defineCollection, z } from "astro:content";
 import { webMention } from "./../utils/types/Webmention";
-import { string } from "astro/zod";
 
 const blog = defineCollection({
   // Type-check frontmatter using a schema
@@ -64,4 +63,12 @@ const referrals = defineCollection({
   })
 })
 
-export const collections = { blog, workExperience, webmentions, blogMentions, referrals };
+const projects = defineCollection({
+  schema: z.object({
+    name: z.string(),
+    summary: z.string(),
+    repo: z.string().optional(),
+  })
+})
+
+export const collections = { blog, workExperience, webmentions, blogMentions, referrals, projects };

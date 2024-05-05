@@ -1,0 +1,18 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render()
+
+const name: string = project.data.name
+const id: string = project.id
+---
+
+<div id={id}>
+  <h2>{name}</h2>
+  <div class="pb-4"><Content/></div>
+</div>
