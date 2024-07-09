@@ -230,5 +230,24 @@
     "repostOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
     "wmProperty": "repost-of",
     "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Fredrik Pettersson",
+      "photo": "https://webmention.io/avatar/iosdev.space/db1d635fb4356e493a52ae26f48c9f875d733a757cb82141ea43b0221d79f2d5.png",
+      "url": "https://mastodon.social/@frippe"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#favorited-by-109846457426287014",
+    "published": null,
+    "wmReceived": "2024-07-09T20:08:49Z",
+    "wmId": 1838420,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109846457426287014",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
   }
 ]
