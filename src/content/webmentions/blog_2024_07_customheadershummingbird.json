@@ -1,0 +1,234 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Casey Hanley",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/c269341eab196fe965f062ad144ff4487013fc687bf39cbcf8951f767dfa5789.jpg",
+      "url": "https://mastodon.social/@caseyhanley"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#favorited-by-109808591751212640",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:28Z",
+    "wmId": 1838395,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109808591751212640",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jay :verified_gay:",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/c6d36007eb31c4af584c27a24068cc9319b3f621e8d35f91dc080ffae0a00508.png",
+      "url": "https://iosdev.space/@heyjaywilson"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753213130223138",
+    "published": "2024-07-08T22:24:55+00:00",
+    "wmReceived": "2024-07-09T16:32:30Z",
+    "wmId": 1838396,
+    "wmSource": "https://brid.gy/comment/mastodon/@heyjaywilson@iosdev.space/112753143566610618/112753213130223138",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "content": {
+      "html": "<p>Couldn’t also isn’t right here. It should say, I didn’t know how and the docs didn’t explicitly say how.</p>",
+      "text": "Couldn’t also isn’t right here. It should say, I didn’t know how and the docs didn’t explicitly say how."
+    },
+    "inReplyTo": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "in-reply-to",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jaleel Akbashev",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/4aa929a9cb9ce975ea566a516fd728d7486f2364559228c19d5e605c170b49f5.png",
+      "url": "https://mastodon.social/@akbashev"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#favorited-by-109527728335711682",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:30Z",
+    "wmId": 1838397,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109527728335711682",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Nick Sloan",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/b46191d0e96161e9adb4b892f57d55d1c36978d55348b748db05076c1ce494e8.png",
+      "url": "https://sloan.host/@nick"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#favorited-by-112209541263525707",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:32Z",
+    "wmId": 1838398,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112753143566610618/112209541263525707",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sean Coates",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/550744946555f65ebd9720a2fa7b33e3125d90df80054cc47775d64790c0821a.jpg",
+      "url": "https://scoat.es/@sean"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#favorited-by-109287810800063567",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:32Z",
+    "wmId": 1838399,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109287810800063567",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jeff C. ????????",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/b05ef1d6701efa50c9bfed8b2c359f91b85fa762ec480b9776ee542d656340c4.png",
+      "url": "https://indieweb.social/@jeff"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#favorited-by-109307248279778310",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:33Z",
+    "wmId": 1838400,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109307248279778310",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Matt Massicotte",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/9a9a28c2a1ec8b7d072dd1cea05116a7917c4236e401a08e79209824407d2c77.jpg",
+      "url": "https://mastodon.social/@mattiem"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#favorited-by-109301942677841928",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:34Z",
+    "wmId": 1838401,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109301942677841928",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Luke Trevorrow",
+      "photo": "https://webmention.io/avatar/iosdev.space/db1d635fb4356e493a52ae26f48c9f875d733a757cb82141ea43b0221d79f2d5.png",
+      "url": "https://fosstodon.org/@luketrevorrow"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#reblogged-by-109331817767436750",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:35Z",
+    "wmId": 1838402,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109331817767436750",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Tibor Bödecs",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/a6f3d041cded5d6b934f11ef949b4d4dba855848c75c0456a610e45b8c1d0faa.png",
+      "url": "https://mastodon.social/@tiborbodecs"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#reblogged-by-109805350118273323",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:36Z",
+    "wmId": 1838403,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109805350118273323",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Joannis",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/b7de2a5fef504e23486349d3cfbbcaac02aae2f55b1b75bc9b08146723bc01a5.png",
+      "url": "https://fosstodon.org/@joannis"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#reblogged-by-109689719587323738",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:37Z",
+    "wmId": 1838404,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109689719587323738",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Adam Fowler",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/dd649803897461e112be0657c5396fb8d6ba52eba38f930af1b297bddbbbf07d.png",
+      "url": "https://mastodon.scot/@opticalaberration"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#reblogged-by-109778347269920280",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:37Z",
+    "wmId": 1838405,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112753143566610618/109778347269920280",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Nick Sloan",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/b46191d0e96161e9adb4b892f57d55d1c36978d55348b748db05076c1ce494e8.png",
+      "url": "https://sloan.host/@nick"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112753143566610618#reblogged-by-112209541263525707",
+    "published": null,
+    "wmReceived": "2024-07-09T16:32:39Z",
+    "wmId": 1838406,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112753143566610618/112209541263525707",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/07/customheadershummingbird/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
+  }
+]
