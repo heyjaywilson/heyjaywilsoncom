@@ -1,0 +1,101 @@
+:root {
+  /* CSS HEX */
+  --black: #08090aff;
+  --rose-quartz: #a7a2a9ff;
+  --seasalt: #f4f7f5ff;
+  --davys-gray: #575a5eff;
+  --eerie-black: #222823ff;
+  --columbia-blue: #bdd5eaff;
+  --ghost-white: #f7f7ffff;
+  --aureolin: #f8f32bff;
+  --oxford-blue: #011936ff;
+  --bittersweet: #fe5f55ff;
+}
+
+ * {  
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--eerie-black);
+ }
+
+
+.roboto-mono-100 {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+ /* <weight>: Use a value from 100 to 900 */
+.roboto-condensed-title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 4rem;
+  margin: 0;
+}
+
+a {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quick-links > li > a {
+  color: var(--oxford-blue)
+}
+
+.quick-links > li {
+  padding-bottom: 0.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.social-item > i {
+  color: var(--bittersweet);
+}
+
+a.social-item,
+a.social-item:visited {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--bittersweet);
+}
+
+a.social-item:hover {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+
+  text-decoration: underline;
+  color: var(--oxford-blue);
+}
+
+.hidden {
+  display: none;
+}
