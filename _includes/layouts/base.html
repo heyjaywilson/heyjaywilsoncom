@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <link href="/assets/css/styles.css" rel="stylesheet" />
+		<link
+			href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+			rel="stylesheet"
+		/>
+    <!--{# TODO: REMOVE #} -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/6be091a552.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-slate-300">
+    <div
+      class="container bg-white mx-auto mt-1 p-4 shadow-md rounded-md border-1 border-slate-500"
+    >
+      <nav class="flex justify-between">
+        <ul class="flex gap-4">
+          <li>
+            <a
+              href="/"
+              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/"
+              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a
+              href="/archive"
+              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              >Archive</a
+            >
+          </li>
+          <li>
+            <a
+              href="/"
+              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <h1 class="text-4xl font-black font-mono my-2">@HeyJayWilson</h1>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="col-span-2">{{ content }}</div>
+        <div class="grid grid-cols-3 gap-4 content-start items-start">
+          <div class="col-span-3">
+            <img
+              src="https://share.heyjay.lol/ufrQVdsLB8nO.jpg"
+              class="w-full rounded-md"
+            />
+          </div>
+          <div>
+            <span class="text-xl font-bold">More</span>
+            <ul>
+              <li class="fotn-mono text-sm lowercase hover:uppercase">
+                Articles
+              </li>
+              <li class="fotn-mono text-sm lowercase hover:uppercase">Notes</li>
+              <li class="fotn-mono text-sm lowercase hover:uppercase">Likes</li>
+              <li class="fotn-mono text-sm lowercase hover:uppercase">
+                Socials
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-2">
+            <span class="text-2xl font-black font-mono">Jay Wilson</span>
+            <p>
+              I am a swift developer with an unhealthy obsession with coffee and
+              tech.
+            </p>
+          </div>
+        </div>
+      </div>
+      <footer class="">
+        <div class="font-mono">
+          Edit this page on <a href="/" class="text-blue-600">GitHub</a>
+        </div>
+        <span class="text-xs font-mono">&copy; 2022-{{ currentYear }} CCT Plus LLC</span>
+        <!-- {# TODO: Make a license page #} -->
+        <div id="licenses">All code shown is <a href="/">MIT licensed</a>.</div>
+      </footer>
+    </div>
+  </body>
+</html>

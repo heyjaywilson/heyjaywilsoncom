@@ -1,0 +1,61 @@
+---
+layout: layouts/base.html
+title: Archive
+permalink: "archive"
+---
+
+<h2 class="text-3xl mt-4 mb-2 font-black">Archive</h2>
+<ul class="h-feed">
+  {% for post in collections.post %}
+  <li
+    class="{% unless post.data.tags contains 'note' %} h-entry {% endunless %}mb-3 pb-1 border-b {% if post.data.tags contains 'note' %}border-b-amber-600{% elsif post.data.tags contains 'article'%}border-b-blue-600{% elsif post.data.tags contains 'video'%}border-b-red-600{% endif %}"
+  >
+    <a
+      href="{{post.url}}"
+      class="{% unless post.data.tags contains 'note' %} u-url {% endunless %}"
+    >
+      <h3 class="text-base">
+        {% if post.data.tags contains 'note' %}
+        <i class="fa-sharp fa-regular fa-note text-amber-600 text-sm"></i>
+        {% elsif post.data.tags contains 'article' %}
+        <i class="fa-sharp fa-regular fa-scroll text-blue-600 text-sm"></i>
+        {% elsif post.data.tags contains 'video' %}
+        <i class="fa-sharp fa-regular fa-video text-red-600 text-sm"></i>
+        {% endif %}
+        <span
+          class="text-xl font-medium{% unless post.data.tags contains 'note' %} p-name {% endunless %}"
+          >{{post.data.title}}</span
+        >
+      </h3>
+      {% unless post.data.tags contains 'note' %}
+      <p class="p-summary">{{ post.templateContent | excerpt }}</p>
+      {% endunless %}
+    </a>
+      <div id="post-details" class="text-xs text-slate-400 font-mono flex gap-4">
+        <div
+          class="{% unless post.data.tags contains 'note' %}p-author h-card{% endunless %}"
+        >
+          <i class="fa-sharp fa-regular fa-address-card"></i> Jay Wilson
+        </div>
+        <div>
+          <i class="fa-sharp fa-regular fa-calendar"></i>
+          <span
+            class="{% unless post.data.tags contains 'note' %}dt-published{% endunless %}"
+            >{{ post.data.publishDate | niceDate }}</span
+          >
+        </div>
+        <div>
+          {% for category in post.data.categories %}
+          <span
+            ><i class="fa-sharp fa-regular fa-hashtag"></i
+            ><span
+              class="{% unless post.data.tags contains 'note' %}p-category{% endunless %}"
+              >{{ category }}</span
+            ></span
+          >
+          {% endfor %}
+        </div>
+      </div>
+  </li>
+  {% endfor %}
+</ul>

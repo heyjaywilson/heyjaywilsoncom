@@ -1,30 +1,25 @@
 ---
-layout: base.liquid
+layout: layouts/base.html
+title: Hey I'm Jay 👋
 ---
 
-<section id="intro">
-  <h1>Hey! 👋 I'm Jay</h1>
-  <p>
-    I'm a <a href="https://github.com/heyjaywilson">software developer</a> with
-    an unhealthy obsession with
-    <a href="https://instagram.com/thewilsonsgetcoffee">coffee ☕</a>.
-  </p>
-  <p>
-    I use this site as a way to blog about what I'm learning, information about
-    projects, and as my hub to my life on the internet. I am embracing the
-    <a href="https://indieweb.org/why">IndieWeb movement</a> by controlling my
-    experience on the web as much as possible.
-  </p>
-  <p>
-    Here are some other pages you might find interesting:
-    <ul class="quick-links">
-      <li>My <a href="/blog/2023/11/01-readme">readme</a></li>
-      <li>My <a href="/work">work experience</a></li>
-      <li>
-        <a href="https://heyjay.omg.lol/now">Now</a> page
-      </li>
-      <li><a href="https://heyjay.paste.lol">Pastebin</a></li>
-    </ul>
-  </p>
-</section>
-<p class="hidden">proven82e4ed</p>
+Welcome to my home on the internet. You probably found this from my Instagram or
+some other blog.
+
+<h2 class="text-3xl mt-4 mb-2 font-black">Latest Happenings</h2>
+<ul>
+  {% for post in collections.post limit:10 %}
+  <li class="mb-3">
+    <h3 class="text-base">
+      {% if post.data.tags contains 'note' %}
+      <i class="fa-sharp fa-regular fa-note text-amber-600 text-sm"></i>
+      {% elsif post.data.tags contains 'article' %}
+      <i class="fa-sharp fa-regular fa-scroll text-blue-600 text-sm"></i>
+      {% endif %} <a href="{{post.url}}" class="text-lg font-bold">{{post.data.title}} <i class="fa-sharp fa-regular fa-link hover:text-blue-600 text-sm"></i></a>
+      {% unless post.data.tags contains 'note' %}
+      <p>{{ post.templateContent | excerpt }}</p>
+      {% endunless %}
+    </h3>
+  </li>
+  {% endfor %}
+</ul>

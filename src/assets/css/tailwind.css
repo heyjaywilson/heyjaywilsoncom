@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply font-mono;
+  }
+  h2 {
+    @apply font-mono;
+  }
+  h3 {
+    @apply font-mono;
+  }
+  h4 {
+    @apply font-mono;
+  }
+  h5 {
+    @apply font-mono;
+  }
+}
+
+.post-content h2 {
+  @apply text-3xl;
+}
+.post-content p {
+  @apply text-base my-2;
+}
+
+.post-content a {
+  @apply font-mono text-sky-800;
+}
