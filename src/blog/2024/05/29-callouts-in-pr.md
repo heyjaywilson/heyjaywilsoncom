@@ -1,7 +1,7 @@
 ---
 title: "Making call outs in GitHub markdown docs"
 description: "Examples of how to add call outs to GitHub markdown docs"
-publishDate: 2024-05-25
+date: 2024-05-25
 tags: 
   - post
   - article

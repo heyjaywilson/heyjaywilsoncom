@@ -1,7 +1,7 @@
 ---
 title: "coffee_ Rebuild: Writing beans to firebase"
 description: Part 6. Wrote bean data to firebase and we discussed motivation around site projects.
-publishDate: 2024-03-08
+date: 2024-03-08
 videoID: hX05vvUNlLU
 tags: 
   - post

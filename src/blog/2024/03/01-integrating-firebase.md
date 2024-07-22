@@ -1,7 +1,7 @@
 ---
 title: "coffee_ Rebuild: Integrating Firebase"
 description: Part 5. I start integrating firebase anonymous authentication and security rules.
-publishDate: 2024-03-01
+date: 2024-03-01
 videoID: XNdwWyNjg3I
 tags: 
   - post

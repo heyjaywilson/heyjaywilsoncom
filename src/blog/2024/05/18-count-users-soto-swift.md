@@ -1,7 +1,7 @@
 ---
 title: "How to get count of all Users in DynamoDB using Swift and Soto"
 description: This is just a short code snippet so that I can reference it later. Subscribe for more snippets and other thoughts.
-publishDate: 2024-05-18
+date: 2024-05-18
 tags:
   - post
   - article
