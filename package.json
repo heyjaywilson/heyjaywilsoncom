@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "build": "npm-run-all build:eleventy build:tailwind",
-    "build:tailwind": "npx @11ty/eleventy",
+    "build:tailwind": "npx tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --minify",
     "build:eleventy": "npx @11ty/eleventy",
-    "dev:tailwind": "npx tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --minify",
+    "dev:tailwind": "npx tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css",
     "dev:eleventy": "npx @11ty/eleventy --serve"
   },
   "keywords": [],
