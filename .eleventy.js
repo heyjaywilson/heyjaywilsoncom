@@ -17,10 +17,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("niceDate", function (d) {
     return english.format(d);
   });
-
-  // eleventyConfig.addFilter("excerpt", function (content) {
-  //   return new ExcerptGenerator().getExcerpt(content, 200);
-  // });
+  eleventyConfig.addFilter("encodeURI", (url) => {
+    return encodeURIComponent(url)
+  })
 
   return {
     dir: {
