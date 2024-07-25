@@ -4,7 +4,7 @@ layout: layouts/base.html
 <article class="post-content mb-12">
   <header>
     <h2 class="my-2">{{ title }}</h2>
-    <div class="text-sm my-4">
+    <div class="text-sm my-4 flex gap-7">
       <span id="author" class="h-card"
         ><a href="https://heyjaywilson.com/about" class="u-url"
           ><i
@@ -13,31 +13,32 @@ layout: layouts/base.html
         ><span class="p-name">Jay Wilson</span><span class="p-pronouns">(he/him)</span></span
       >
       <span class="font-mono">Date published: {{ date | niceDate }}</span>
+      <span class="font-mono">Last updated: {{ updatedDate | niceDate }}</span>
     </div>
   </header>
   {% if tags contains 'article' %}
-    {% if showAffiliateDisclaimer == true %}<div
-      class="bg-slate-100 border-slate-400 border-2 m-2 p-2 rounded-md lg:flex lg:gap-2 lg:align-middle lg:items-center"
-    >
-      <i class="fa-light fa-sack-dollar text-emerald-700 text-lg"></i><span
-        class="text-sm font-mono"
-        >Some or all links in on this page are affiliate links, and I will receive
-        some kind of commission if you purchase the service or product.</span
+    {% if showAffiliateDisclaimer == true %}
+      <div
+        class="bg-slate-100 border-slate-400 border-2 m-2 p-2 rounded-md lg:flex lg:gap-2 lg:align-middle lg:items-center"
       >
-    </div>
-    {% endif %}    
+        <i class="fa-light fa-sack-dollar text-emerald-700 text-lg"></i
+        ><span
+          class="text-sm font-mono"
+          >Some or all links in on this page are affiliate links, and I will receive some kind of commission if you
+          purchase the service or product.</span
+        >
+      </div>
+    {% endif %}
     {{ content }}
     <footer>
       {% if showBuyCoffee %}
         <div class="text-center flex flex-col items-center my-8">
-            <p class="w-1/2">
-              Support my content and coffee addiction.
-            </p>
-              <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js" async></script>
-              <script type="text/javascript">
-                kofiwidget2.init('Buy me a coffee', '#29abe0',
-                'W7W2FFDSW');kofiwidget2.draw();
-              </script>
+          <p class="w-1/2">Support my content and coffee addiction.</p>
+          <script type="text/javascript" src="https://storage.ko-fi.com/cdn/widget/Widget_2.js" async></script>
+          <script type="text/javascript">
+            kofiwidget2.init('Buy me a coffee', '#29abe0', 'W7W2FFDSW');
+            kofiwidget2.draw();
+          </script>
         </div>
       {% endif %}
     </footer>

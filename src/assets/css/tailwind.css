@@ -4,24 +4,27 @@
 
 @layer base {
   h1 {
-    @apply font-mono;
+    @apply font-mono font-black;
   }
   h2 {
-    @apply font-mono;
+    @apply font-mono font-black;
   }
   h3 {
-    @apply font-mono;
+    @apply font-mono font-black;
   }
   h4 {
-    @apply font-mono;
+    @apply font-mono font-black;
   }
   h5 {
-    @apply font-mono;
+    @apply font-mono font-black;
   }
 }
 
 .post-content h2 {
-  @apply text-3xl;
+  @apply text-3xl pb-2 pt-4;
+}
+.post-content h3 {
+  @apply text-xl pb-1 pt-2;
 }
 .post-content p {
   @apply text-base my-2;
@@ -32,4 +35,16 @@
 }
 .post-content a.affiliateLink {
   @apply font-bold text-green-700;
+}
+
+.post-content ul {
+  @apply list-disc list-outside p-2 ms-8;
+}
+
+.post-content blockquote {
+  @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
+}
+
+.post-content   hr {
+  @apply my-2 border-cyan-800 rounded-md border-2;
 }
