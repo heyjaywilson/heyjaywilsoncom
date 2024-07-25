@@ -30,3 +30,6 @@
 .post-content a {
   @apply font-mono text-sky-800;
 }
+.post-content a.affiliateLink {
+  @apply font-bold text-green-700;
+}

@@ -1,0 +1,22 @@
+---
+title: Trouble focusing was solved by purchasing more tech
+description: I’ve been having issues getting things done and staying focused. My brain just likes to wander, which isn’t bad but can sometimes interfere with my productivity.
+heroImage: "https://images.unsplash.com/photo-1556196148-1fb724238998?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyM3x8aGVhZHBob25lfGVufDB8fHx8MTY5MzM5OTk3NXww&ixlib=rb-4.0.3&q=80&w=1080"
+date: 2023-08-11
+canonicalURL: "https://heyjaywilson.substack.com/p/trouble-focusing-was-solved-by-purchasing"
+showBuyCoffee: true
+showAffiliateDisclaimer: true
+tags:
+  - post
+  - article
+categories:
+  - work
+---
+
+I’ve been having issues getting things done and staying focused. My brain just likes to wander, which isn’t bad but can sometimes interfere with my productivity.
+
+I realized it’s been a bit worse lately and I think I connected the dots down to headphones. My <a href="https://amzn.to/3qXGPgH" class="affiliateLink">AirPod Max</a> died a couple months ago and they were what I used to use to signal “focus mode”. I decided it was time to replace the broken headphones with some not broken ones and chose the <a href="https://amzn.to/3qWZSYw" class="affiliateLink">Beats Studio Pro</a>.
+
+The price is honestly what sold me. The features are alright and not as solid as the AirPod Max but honestly for the price difference, the beats are great. They are comfy and apply just the right amount of pressure. Also, they are pretty light.
+
+My focusing has also increased since getting them. A pair of over/on ear headphones is definitely something worth looking into even if you work from home and use speakers.
