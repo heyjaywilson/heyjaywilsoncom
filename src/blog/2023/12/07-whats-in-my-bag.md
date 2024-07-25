@@ -1,0 +1,32 @@
+---
+title: "What's in my work bag 2024"
+description: "This video covers what I generally take with me when working away from the home for a short time."
+date: 2023-12-07
+heroImage: "/blog/23/12/07.jpg"
+videoID: "wPMGpqla82w"
+showBuyCoffee: true
+showAffiliateDisclaimer: true
+categories:
+  - content-creation
+  - vlog
+tags: 
+  - post
+  - video
+---
+
+
+Here's what I take with me when I work. I try to keep it small and light.
+
+Here are links to everything mentioned in the video.
+
+- The bag: [Wandrd Roam 6L Sling](https://geni.us/wandrd6lsling)
+- The laptop: [MacBook Pro 14" M1 Max](https://geni.us/cctplus-m3max) (similar spec but it's the m3 model)
+- The camera in the video: [Sony RX100 VII](https://geni.us/cctpocketcam)
+- Accessories:
+  - [AirPod Pros](https://geni.us/0r2ZG)
+  - [Anker battery pack](https://geni.us/AWJhN)
+  - [Anker USB C braided cable](https://geni.us/K9jpMZx)
+  - [Travelers Journal](https://geni.us/6yQyTr)
+  - [Tide to Go Pen](https://geni.us/8jc9h)
+
+The choice to not bring any type of plug to recharge is really hard sometimes, but I usually choose not to due to the Anker battery pack and my computer’s battery life holding about 4 hours of charge while running Xcode betas. It has enough punch to recharge my laptop at least once while still having some room to charge my phone if needed.

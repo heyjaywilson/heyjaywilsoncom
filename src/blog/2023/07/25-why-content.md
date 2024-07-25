@@ -4,13 +4,12 @@ description: Short answer is networking and to build credibility
 heroImage: "https://images.unsplash.com/photo-1635830625698-3b9bd74671ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwxOHx8Y29udGVudCUyMGNyZWF0b3J8ZW58MHx8fHwxNjkwMjg4OTY5fDA&ixlib=rb-4.0.3&q=80&w=1080"
 date: 2023-07-25
 canonicalURL: https://heyjaywilson.substack.com/p/why-i-started-creating-content
-includeBMC: true
+showBuyCoffee: true
 tags:
   - post
   - article
 categories:
   - content-creation
-type: article
 ---
 
 Everyone says to get a job you need to network. But what do you do when you don’t know even how to start finding people who do the thing you want to do? You turn to the internet.

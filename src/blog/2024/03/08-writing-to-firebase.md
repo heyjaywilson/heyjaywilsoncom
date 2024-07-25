@@ -14,6 +14,7 @@ categories:
   - firebase
 canonicalURL: "https://heyjaycodes.com/coffee-rebuild-writing-beans-to-firebase"
 heroImage: "https://thorgi.heyjay.lol/hjc/thumbnails/coffee_%20stream-20240308.jpg"
+showBuyCoffee: true
 ---
 
 This was a great stream! Had some people pop in the chat that I haven't talked to in awhile which was nice. We also had a good discussion around motivation and having a ship it attitude.

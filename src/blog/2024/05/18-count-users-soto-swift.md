@@ -10,6 +10,7 @@ categories:
   - dynamodb
   - swift
 canonicalURL: "https://heyjaycodes.com/how-to-get-count-of-all-users-in-dynamodb-using-swift-and-soto"
+showBuyCoffee: true
 ---
 This was made using [Soto v7.0.0-rc1](https://github.com/soto-project/soto).
 

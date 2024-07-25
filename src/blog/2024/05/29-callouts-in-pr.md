@@ -8,6 +8,7 @@ tags:
 categories:
   - github
   - documentation
+showBuyCoffee: true
 ---
 
 I like to decorate my PRs with notes and warnings. [GitHub](https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/) supports this with special styling. I can never remember the markdown syntax for it, so here's a post.

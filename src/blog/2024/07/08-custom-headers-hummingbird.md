@@ -1,6 +1,7 @@
 ---
 title: How to access custom headers in Hummingbird 2
 date: 2024-07-08
+showBuyCoffee: true
 tags:
   - post
   - article

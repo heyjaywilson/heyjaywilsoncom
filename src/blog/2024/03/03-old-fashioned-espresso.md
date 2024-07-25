@@ -8,4 +8,5 @@ tags:
 categories:
   - coffee
   - life
+showBuyCoffee: true
 ---

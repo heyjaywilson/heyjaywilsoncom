@@ -1,0 +1,44 @@
+---
+title: "What happened last week?"
+metatitle: What happened Dec 3 through Dec 9, 2023
+description: A summary of what happened in Jay's life the week of December 3rd 2023.
+date: 2023-12-09
+pubDate: "Dec 9 2023"
+heroImage: "/blog/23/12/09.jpg"
+showBuyCoffee: true
+canonicalURL: "https://open.substack.com/pub/heyjaywilson/p/what-happened-last-week-c08"
+categories:
+  - check-in
+  - weekly
+tags: [post, note]
+overrideNote: true
+---
+
+## Goals for the week
+
+- ✅ Finish backups and imports in [Blueprint](https://blueprint.heyjaywilson.com/)
+  - This was a carry over from last week 🎉
+- ✅ Write a new feature proposal at work
+- ✅ Go to Seattle and have fun!
+
+## Things I did
+
+- Posted some YouTube Videos
+  - [Blueprint Dev Vlog?](https://geni.us/qfl4Ux)
+  - [State of my Content?](https://geni.us/stateOfContent2024)
+  - [What's in my 2024 work bag?](https://geni.us/2024workbag)
+- Went to Seattle and watched some Hockey
+
+## Dinners
+
+- Garlic chicken parmesan in the crock pot
+- Tacos
+
+## Reading
+
+- [How to grow from senior to a lead role](https://open.substack.com/pub/gregorojstersek/p/how-to-grow-from-senior-to-a-lead) (From substack)
+- [TDD is Kanban for Code](https://open.substack.com/pub/tidyfirst/p/tdd-is-kanban-for-code) (From substack)
+
+## Concepts/Definitions I looked up
+
+- [Stacked PRs](https://stacking.dev/) - this seems really interesting and could be helpful but I'm not too sure how it works on a team

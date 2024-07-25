@@ -9,4 +9,5 @@ categories:
   - coding
   - serverSideSwift
   - backend
+showBuyCoffee: true
 ---

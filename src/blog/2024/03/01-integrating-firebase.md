@@ -14,6 +14,7 @@ categories:
   - firebase
 canonicalURL: "https://heyjaycodes.com/coffee-rebuild-integrating-firebase"
 heroImage: "https://thorgi.heyjay.lol/hjc/thumbnails/coffee_%20stream-20240301.jpg"
+showBuyCoffee: true
 ---
 
 At the beginning of the year, I wanted to rebuild [`_coffee`](https://heyjay.url.lol/coffeetrackergh) to include a few other features, watch [this video](https://youtube.com/live/nkVbtRdgF8E?feature=share) for more context. As part of this rebuild, I wanted to completely rethink how I stored the data and introduce a way for users to create a pool of coffee data. Today, I took a good first step towards that and started working with [Firebase](https://firebase.google.com/) and anonymous accounts.
