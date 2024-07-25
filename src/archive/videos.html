@@ -1,0 +1,11 @@
+---
+layout: layouts/base.html
+title: Videos
+---
+
+<h2 class="text-3xl mt-4 mb-2 font-black"> <i class="fa-sharp fa-regular fa-video text-red-600"> </i> {{title}}</h2>
+<ul class="h-feed">
+  {% for post in collections.video reversed() %}
+  {% include 'postListItem' post: post%}
+  {% endfor %}
+</ul>

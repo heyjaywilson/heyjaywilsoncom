@@ -1,10 +1,6 @@
 ---
 layout: layouts/base.html
 ---
-
-{% for tag in data.tags %}
-<p>{{ tag }}</p>
-{% endfor %}
 <article class="post-content mb-12">
   <header>
     <h2 class="my-2">{{ title }}</h2>
@@ -14,15 +10,12 @@ layout: layouts/base.html
           ><i
             class="fa-sharp fa-regular fa-address-card text-orange-600"
           ></i> </a
-        ><span class="p-name">Jay Wilson</span
-        ><span class="p-pronouns">(he/him)</span></span
+        ><span class="p-name">Jay Wilson</span><span class="p-pronouns">(he/him)</span></span
       >
-      <span class="font-mono"
-        >Date published: {{ data.datePublished | niceDate }}</span
-      >
+      <span class="font-mono">Date published: {{ data.datePublished | niceDate }}</span>
     </div>
   </header>
-  {% if tags.contains 'article' %}
-  {{ content }}
+  {% if tags contains 'article' %}
+    {{ content }}
   {% endif %}
 </article>

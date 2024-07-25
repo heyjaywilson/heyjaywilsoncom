@@ -3,23 +3,12 @@ layout: layouts/base.html
 title: Hey I'm Jay 👋
 ---
 
-Welcome to my home on the internet. You probably found this from my Instagram or
-some other blog.
-
+<p>
+  Welcome to my home on the internet. You probably found this from my Instagram
+  or some other blog.
+</p>
 <h2 class="text-3xl mt-4 mb-2 font-black">Latest Happenings</h2>
 <ul>
-  {% for post in collections.post limit:10 %}
-  <li class="mb-3">
-    <h3 class="text-base">
-      {% if post.data.tags contains 'note' %}
-      <i class="fa-sharp fa-regular fa-note text-amber-600 text-sm"></i>
-      {% elsif post.data.tags contains 'article' %}
-      <i class="fa-sharp fa-regular fa-scroll text-blue-600 text-sm"></i>
-      {% endif %} <a href="{{post.url}}" class="text-lg font-bold">{{post.data.title}} <i class="fa-sharp fa-regular fa-link hover:text-blue-600 text-sm"></i></a>
-      {% unless post.data.tags contains 'note' %}
-      <p>{{ post.templateContent | excerpt }}</p>
-      {% endunless %}
-    </h3>
-  </li>
-  {% endfor %}
+  {% assign posts = collections.post | reverse %} {% for post in posts limit:5
+  %} {% include 'postListItem' post: post%} {% endfor %}
 </ul>
