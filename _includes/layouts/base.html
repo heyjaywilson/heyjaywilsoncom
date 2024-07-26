@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
     <link href="/assets/css/styles.css" rel="stylesheet" />
-		<link
-			href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
-			rel="stylesheet"
-		/>
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
     <!--Font Awesome-->
     <script
       src="https://kit.fontawesome.com/6be091a552.js"
-      crossorigin="anonymous" async
+      crossorigin="anonymous"
+      async
     ></script>
   </head>
   <body>
-    <div
-      class="main-container"
-    >
+    <div class="main-container">
       <nav class="main-nav">
         <ul class="flex gap-4">
           <li>
@@ -67,7 +66,9 @@
               <li class="fotn-mono text-sm lowercase hover:uppercase">
                 <a href="/archive/articles">Articles</a>
               </li>
-              <li class="fotn-mono text-sm lowercase hover:uppercase"><a href="/archive/notes">Notes</a></li>
+              <li class="fotn-mono text-sm lowercase hover:uppercase">
+                <a href="/archive/notes">Notes</a>
+              </li>
               <li class="fotn-mono text-sm lowercase hover:uppercase">
                 <a href="/archive/videos">Videos</a>
               </li>
@@ -81,19 +82,51 @@
             </p>
           </div>
           <div class="col-span-3 flex text-3xl justify-around">
-            <a href="https://lnk.heyjay.coffee/threads" class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"><i class="fa-brands fa-threads"></i></a>
-            <a href="https://lnk.heyjay.coffee/mastodon" class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"><i class="fa-brands fa-mastodon"></i></a>
-            <a href="https://lnk.heyjay.coffee/instagram" class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://lnk.heyjay.coffee/my-github" class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"><i class="fa-brands fa-github"></i></a>
-            <a href="https://lnk.heyjay.coffee/buy-jay-coffee" class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"><i class="fa-sharp fa-regular fa-cup-togo"></i></a>
+            <a
+              href="https://threads.net/@heyjaywilson"
+              rel="me"
+              class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"
+              ><i class="fa-brands fa-threads"></i
+            ></a>
+            <a
+              href="https://iosdev.space/@heyjaywilson"
+              rel="me"
+              class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"
+              ><i class="fa-brands fa-mastodon"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/heyjaywilson"
+              rel="me"
+              class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://github.com/heyjaywilson"
+              rel="me"
+              class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://ko-fi.com/heyjaywilson"
+              rel="me"
+              class="px-2 text-sky-900 hover:text-sky-400 hover:scale-125"
+              ><i class="fa-sharp fa-regular fa-cup-togo"></i
+            ></a>
           </div>
         </div>
       </div>
       <footer class="pt-8">
         <div class="font-mono">
-          Edit this page on <a href="https://github.com/heyjaywilson/heyjaywilsoncom/{{ page.inputPath }}" class="text-sky-600">GitHub</a>
+          Edit this page on
+          <a
+            href="https://github.com/heyjaywilson/heyjaywilsoncom/{{ page.inputPath }}"
+            class="text-sky-600"
+            >GitHub</a
+          >
         </div>
-        <span class="text-xs font-mono">&copy; 2022-{{ currentYear }} CCT Plus LLC</span>
+        <span class="text-xs font-mono"
+          >&copy; 2022-{{ currentYear }} CCT Plus LLC</span
+        >
       </footer>
     </div>
   </body>
