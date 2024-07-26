@@ -4,30 +4,40 @@
 
 @layer base {
   h1 {
-    @apply font-mono font-black;
+    @apply font-mono font-black text-5xl pb-2 pt-4;
   }
   h2 {
-    @apply font-mono font-black;
+    @apply font-mono font-bold text-3xl pb-2 pt-4;
   }
   h3 {
-    @apply font-mono font-black;
+    @apply font-mono font-extrabold text-xl pb-1 pt-2;;
   }
   h4 {
-    @apply font-mono font-black;
+    @apply font-mono font-extrabold text-lg;
   }
   h5 {
-    @apply font-mono font-black;
+    @apply font-mono font-extrabold;
+  }
+
+  p {
+    @apply text-base my-1;
+  }
+
+  body {
+    @apply lg:bg-slate-300;
   }
 }
 
-.post-content h2 {
-  @apply text-3xl pb-2 pt-4;
+.main-container {
+  @apply container lg:bg-white mx-auto lg:my-4 p-4 lg:shadow-md lg:rounded-md lg:border-slate-500;
 }
-.post-content h3 {
-  @apply text-xl pb-1 pt-2;
+
+.main-nav {
+  @apply flex justify-between sticky top-0 bg-white;
 }
+
 .post-content p {
-  @apply text-base my-2;
+  @apply my-2;
 }
 
 .post-content a {

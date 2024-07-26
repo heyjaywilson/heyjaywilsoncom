@@ -9,51 +9,50 @@
 			href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
 			rel="stylesheet"
 		/>
-    <!--{# TODO: REMOVE #} -->
     <!--Font Awesome-->
     <script
       src="https://kit.fontawesome.com/6be091a552.js"
       crossorigin="anonymous" async
     ></script>
   </head>
-  <body class="bg-slate-300">
+  <body>
     <div
-      class="container bg-white mx-auto mt-1 p-4 shadow-md rounded-md border-1 border-slate-500"
+      class="main-container"
     >
-      <nav class="flex justify-between">
+      <nav class="main-nav">
         <ul class="flex gap-4">
           <li>
             <a
               href="/"
-              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              class="font-mono text-lg lg:text-sm lowercase hover:uppercase hover:text-cyan-800"
               >Home</a
             >
           </li>
           <li>
             <a
               href="/work"
-              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              class="font-mono text-lg lg:text-sm lowercase hover:uppercase hover:text-cyan-800"
               >Work</a
             >
           </li>
           <li>
             <a
               href="/archive"
-              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              class="font-mono text-lg lg:text-sm lowercase hover:uppercase hover:text-cyan-800"
               >Archive</a
             >
           </li>
           <li>
             <a
               href="/about"
-              class="font-mono text-sm lowercase hover:uppercase hover:text-cyan-800"
+              class="font-mono text-lg lg:text-sm lowercase hover:uppercase hover:text-cyan-800"
               >About</a
             >
           </li>
         </ul>
       </nav>
-      <h1 class="text-4xl font-black font-mono my-2">@HeyJayWilson</h1>
-      <div class="grid grid-cols-3 gap-4">
+      <span class="text-4xl font-black font-mono my-2">@HeyJayWilson</span>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div class="col-span-2">{{ content }}</div>
         <div class="grid grid-cols-3 gap-4 content-start items-start">
           <div class="col-span-3">

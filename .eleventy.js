@@ -20,6 +20,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("encodeURI", (url) => {
     return encodeURIComponent(url)
   })
+  eleventyConfig.addFilter("shortenLink", (text) => {
+    var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(urlRegex, function(url) {
+      return '';
+  });
+  })
+  eleventyConfig.addFilter("makeMDLink", (text) => {
+    var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    return text.replace(urlRegex, function(url) {
+      return '<a href="' + url + '">' + url + '</a>';
+  });
+  })
 
   return {
     dir: {

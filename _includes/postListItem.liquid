@@ -7,44 +7,47 @@
   >
     <h3 class="text-base">
       {% if post.data.tags contains 'note' %}
-      <i class="fa-sharp fa-regular fa-note text-amber-600 text-sm"></i>
+        <i class="fa-sharp fa-regular fa-note text-amber-600 text-sm"></i>
       {% elsif post.data.tags contains 'article' %}
-      <i class="fa-sharp fa-regular fa-scroll text-blue-600 text-sm"></i>
+        <i class="fa-sharp fa-regular fa-scroll text-blue-600 text-sm"></i>
       {% elsif post.data.tags contains 'video' %}
-      <i class="fa-sharp fa-regular fa-video text-red-600 text-sm"></i>
+        <i class="fa-sharp fa-regular fa-video text-red-600 text-sm"></i>
       {% endif %}
       <span
         class="text-xl font-medium{% unless post.data.tags contains 'note' %} p-name {% endunless %}"
-        >{{post.data.title}}</span
       >
+        {{ post.data.title | shortenLink }}
+      </span>
     </h3>
     {% unless post.data.tags contains 'note' %}
-    <p class="p-summary">{{ post.templateContent | excerpt }}</p>
+      <p class="p-summary">{{ post.templateContent | excerpt }}</p>
     {% endunless %}
   </a>
-    <div id="post-details" class="text-xs text-slate-400 font-mono flex gap-4">
-      <div
-        class="{% unless post.data.tags contains 'note' %}p-author h-card{% endunless %}"
+  <div id="post-details" class="text-xs text-slate-400 font-mono flex flex-wrap gap-4">
+    <div
+      class="{% unless post.data.tags contains 'note' %}p-author h-card{% endunless %}"
+    >
+      <i class="fa-sharp fa-regular fa-address-card"></i> Jay Wilson
+    </div>
+    <div>
+      <i class="fa-sharp fa-regular fa-calendar"></i>
+      <span
+        class="{% unless post.data.tags contains 'note' %}dt-published{% endunless %}"
       >
-        <i class="fa-sharp fa-regular fa-address-card"></i> Jay Wilson
-      </div>
-      <div>
-        <i class="fa-sharp fa-regular fa-calendar"></i>
-        <span
-          class="{% unless post.data.tags contains 'note' %}dt-published{% endunless %}"
-          >{{ post.date | niceDate }}</span
-        >
-      </div>
-      <div>
-        {% for category in post.data.categories %}
+        {{- post.date | niceDate -}}
+      </span>
+    </div>
+    <div>
+      {% for category in post.data.categories %}
         <span
           ><i class="fa-sharp fa-regular fa-hashtag"></i
           ><span
             class="{% unless post.data.tags contains 'note' %}p-category{% endunless %}"
-            >{{ category }}</span
-          ></span
+          >
+            {{- category -}}
+          </span></span
         >
-        {% endfor %}
-      </div>
+      {% endfor %}
     </div>
+  </div>
 </li>
