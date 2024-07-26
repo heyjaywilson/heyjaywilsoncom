@@ -2,7 +2,6 @@
   "name": "heyjaywilsoncom",
   "version": "2.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
     "build": "npm-run-all build:eleventy build:tailwind",
