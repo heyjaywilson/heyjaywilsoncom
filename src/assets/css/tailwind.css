@@ -26,6 +26,10 @@
   body {
     @apply lg:bg-slate-300;
   }
+
+  a {
+    @apply font-mono font-semibold text-sky-600;
+  }
 }
 
 .main-container {
@@ -33,16 +37,13 @@
 }
 
 .main-nav {
-  @apply flex justify-between sticky top-0 bg-white;
+  @apply flex justify-between sticky top-0 bg-white pb-2;
 }
 
 .post-content p {
   @apply my-2;
 }
 
-.post-content a {
-  @apply font-mono text-sky-800;
-}
 .post-content a.affiliateLink {
   @apply font-bold text-green-700;
 }

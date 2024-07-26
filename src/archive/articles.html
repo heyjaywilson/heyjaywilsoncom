@@ -3,7 +3,7 @@ layout: layouts/base.html
 title: Articles
 ---
 
-<h2 class="text-3xl mt-4 mb-2 font-black"><i class="fa-sharp fa-regular fa-scroll text-blue-600"></i> {{title}}</h2>
+<h2 class="text-3xl mt-4 mb-2 font-black"><i class="fa-sharp fa-regular fa-scroll text-sky-600"></i> {{title}}</h2>
 <ul class="h-feed">
   {% for post in collections.article reversed() %}
   {% include 'postListItem' post: post%}
