@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy("src/assets/images/*");
+  eleventyConfig.addPassthroughCopy("src/favicon.svg");
   eleventyConfig.addGlobalData("currentYear", () => new Date().getFullYear());
   eleventyConfig.setServerOptions({
     watch: ["./src/assets/css/styles.css"],
