@@ -1,0 +1,19 @@
+---
+layout: layouts/base
+---
+<h2 class="text-3xl mt-4 mb-2 font-black">Work Experience</h2>
+<ul class="h-feed">
+  {% assign workExperience = collections.work | sort: 'startDate' | reverse %}
+  {% for work in workExperience %}
+    {% comment %} Puts current work at the front {% endcomment %}
+    {% unless work.data.endDate %}
+      {% include 'workListItem', work: work %}
+    {% endunless %}
+  {% endfor %}
+  {% comment %} Then finds previous jobs {% endcomment %}
+  {% for work in workExperience %}
+    {% if work.data.endDate %}
+      {% include 'workListItem', work: work %}
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,14 @@
+<li class="flex flex-col mb-8">
+  <div class="flex gap-2">
+    <h3 class="text-xl font-bold hover:text-blue-600"><a href="{{ work.data.website }}">{{ work.data.employer }}</a></h3>
+    {% if work.data.isPresent %} <i class="fa-solid fa-badge-check text-emerald-500"></i>{% endif %}
+  </div>
+  <p><i class="fa-solid {{work.data.icon}} pr-3"></i><span>{{ work.data.position }}</span></p>
+  <p class="font-mono font-medium text-sm">
+    {{ work.data.startDate | date: '%b %Y' }} -
+    {% if work.data.endDate %}{{ work.data.endDate | date: '%b %Y' }}{% else %}Current{% endif %}
+  </p>
+  <div class="responsibilities">
+    {{ work.content }}
+  </div>
+</li>

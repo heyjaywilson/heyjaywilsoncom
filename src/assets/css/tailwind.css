@@ -37,7 +37,8 @@
   @apply font-bold text-green-700;
 }
 
-.post-content ul {
+.post-content ul,
+.responsibilities ul {
   @apply list-disc list-outside p-2 ms-8;
 }
 
@@ -45,6 +46,6 @@
   @apply px-4 py-1 my-4 border-l-4 border-cyan-500 bg-cyan-900/10 rounded-r-md w-full;
 }
 
-.post-content   hr {
+.post-content hr {
   @apply my-2 border-cyan-800 rounded-md border-2;
 }
