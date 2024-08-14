@@ -68,7 +68,9 @@ const showTitle = type === "article";
               )
             }
           </div>
-          <slot />
+          <div class="content">
+            <slot />
+          </div>
         </div>
         <hr class="mt-4 my-2 border-slate-400 rounded-md border-1;" />
         <div id="tags" class="py-4 flex flex-wrap">
@@ -150,6 +152,11 @@ const showTitle = type === "article";
   }
   pre {
     @apply p-8 rounded-md;
+  }
+
+  .content img {
+    @apply m-auto rounded-lg shadow-lg shadow-zinc-600/50 border border-zinc-500;
+    max-width: 60%;
   }
 
   .page-padding {
