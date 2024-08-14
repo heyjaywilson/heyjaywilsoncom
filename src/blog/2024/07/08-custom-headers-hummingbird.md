@@ -1,5 +1,6 @@
 ---
 title: How to access custom headers in Hummingbird 2
+description: Custom headers in Hummingbird 2 needs to be an HTTPField.name type.
 date: 2024-07-08
 showBuyCoffee: true
 tags:
