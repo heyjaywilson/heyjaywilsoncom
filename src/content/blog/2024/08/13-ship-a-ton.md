@@ -39,7 +39,7 @@ I'm building both parts of the app at the same time, so that areas of the server
 
 As I mentioned, Clerk handles user auth, but I need to be able to associate a user in the database with updates and places created, so I wanted my own record of ids, dateCreated, and usernames. I also want to be able to store how many updates a user makes (future thinking here about a user's reputation on the app), so I needed a place to store that. Here's the data I think I need about a user so far:
 
-```mermaid
+<pre class="mermaid">
 erDiagram
 	User {
 		string userid
@@ -48,7 +48,7 @@ erDiagram
 		string updatesAt
 		int numberOfUpdates
 	}
-```
+</pre>
 
 ### App Side
 
