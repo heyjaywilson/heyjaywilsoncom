@@ -1,0 +1,116 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Chris Shiflett",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/72d142e0716be85f6af31cffe383f2fbf2403ab79ecb81bf623fc41e0421a958.jpg",
+      "url": "https://mastodon.social/@shiflett"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112962777607398124#favorited-by-109310874652685382",
+    "published": null,
+    "wmReceived": "2024-08-15T12:27:31Z",
+    "wmId": 1843319,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112962777607398124/109310874652685382",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jon Tan",
+      "photo": "https://cdn.masto.host/iosdevspace/cache/accounts/avatars/109/506/666/940/321/453/original/53e3ac5e59bf432e.jpeg",
+      "url": "https://typo.social/@jontan"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112962777607398124#favorited-by-109506666940321453",
+    "published": null,
+    "wmReceived": "2024-08-15T12:27:31Z",
+    "wmId": 1843320,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112962777607398124/109506666940321453",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Nick Sloan",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/b46191d0e96161e9adb4b892f57d55d1c36978d55348b748db05076c1ce494e8.png",
+      "url": "https://sloan.host/@nick"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112962777607398124#favorited-by-112209541263525707",
+    "published": null,
+    "wmReceived": "2024-08-15T12:27:33Z",
+    "wmId": 1843321,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112962777607398124/112209541263525707",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "mattkiazyk",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/7f9637bfbbd83661f5c325f90ce4143a14a1b4a3d0587f47cc49b10386d77dae.png",
+      "url": "https://iosdev.space/@mattkiazyk"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112962777607398124#favorited-by-109294135018974420",
+    "published": null,
+    "wmReceived": "2024-08-15T12:27:34Z",
+    "wmId": 1843322,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112962777607398124/109294135018974420",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sean Coates",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/550744946555f65ebd9720a2fa7b33e3125d90df80054cc47775d64790c0821a.jpg",
+      "url": "https://scoat.es/@sean"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112962777607398124#reblogged-by-109287810800063567",
+    "published": null,
+    "wmReceived": "2024-08-15T12:27:34Z",
+    "wmId": 1843323,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112962777607398124/109287810800063567",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Max Siegel",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/305ed9bbdf35700a01d8faed6e1582d8094ed20031897dd95221872b87ea7a81.jpg",
+      "url": "https://tech.lgbt/@maxrsiegel"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112962777607398124#favorited-by-109306497098173864",
+    "published": null,
+    "wmReceived": "2024-08-15T12:27:35Z",
+    "wmId": 1843324,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112962777607398124/109306497098173864",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/13-ship-a-ton/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  }
+]
