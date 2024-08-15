@@ -21,5 +21,62 @@
     "inReplyTo": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
     "wmProperty": "in-reply-to",
     "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Owen",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/c578993f4fadb48fe6f82c703a4e9bfea2de148a0feb820517e4e349a26f753a.png",
+      "url": "https://mastodon.social/@robowen"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966010883579520#favorited-by-110791786776703727",
+    "published": null,
+    "wmReceived": "2024-08-15T15:07:11Z",
+    "wmId": 1843343,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112966010883579520/110791786776703727",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Andy Pease :bongoCat:",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/69a4ff8b6bd4b72f554d87eaddba2b17f966188b7b4505054347c9ef0de1b265.png",
+      "url": "https://mastodon.social/@andypease"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966010883579520#favorited-by-109505616956132081",
+    "published": null,
+    "wmReceived": "2024-08-15T15:07:11Z",
+    "wmId": 1843344,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112966010883579520/109505616956132081",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Owen",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/c578993f4fadb48fe6f82c703a4e9bfea2de148a0feb820517e4e349a26f753a.png",
+      "url": "https://mastodon.social/@robowen"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966010883579520#reblogged-by-110791786776703727",
+    "published": null,
+    "wmReceived": "2024-08-15T15:07:11Z",
+    "wmId": 1843345,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112966010883579520/110791786776703727",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
   }
 ]
