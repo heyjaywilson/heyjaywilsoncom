@@ -78,5 +78,28 @@
     "repostOf": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
     "wmProperty": "repost-of",
     "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Michael Thingnes",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/c58af08ef077cb2dadcc5dc7fd195d2f6429fbb644d32c5ff8ec92d0f2444303.jpg",
+      "url": "https://social.thimic.no/@thimic"
+    },
+    "url": "https://social.thimic.no/@thimic/112967652668923826",
+    "published": "2024-08-15T19:19:42+00:00",
+    "wmReceived": "2024-08-15T19:28:46Z",
+    "wmId": 1843358,
+    "wmSource": "https://brid.gy/comment/mastodon/@heyjaywilson@iosdev.space/112966010883579520/112967652753631988",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProtocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://iosdev.space/@heyjaywilson\" class=\"u-url\">@<span>heyjaywilson</span></a></span> A possible workaround is to hit Cmd+Shift+2 in Xcode after every device or Xcode update, then select your device in the list. For me that triggers the copy as a background process. The hard part is remembering to do it.</p>",
+      "text": "@heyjaywilson A possible workaround is to hit Cmd+Shift+2 in Xcode after every device or Xcode update, then select your device in the list. For me that triggers the copy as a background process. The hard part is remembering to do it."
+    },
+    "inReplyTo": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProperty": "in-reply-to",
+    "wmPrivate": false
   }
 ]
