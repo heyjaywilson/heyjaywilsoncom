@@ -1,0 +1,78 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Frédéric Bronner",
+      "photo": "https://webmention.io/avatar/iosdev.space/db1d635fb4356e493a52ae26f48c9f875d733a757cb82141ea43b0221d79f2d5.png",
+      "url": "https://techhub.social/@FredericBronner"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966141130745039#favorited-by-109466236887972400",
+    "published": null,
+    "wmReceived": "2024-08-15T13:07:36Z",
+    "wmId": 1843327,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112966141130745039/109466236887972400",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Frédéric Bronner",
+      "photo": "https://webmention.io/avatar/iosdev.space/db1d635fb4356e493a52ae26f48c9f875d733a757cb82141ea43b0221d79f2d5.png",
+      "url": "https://techhub.social/@FredericBronner"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966141130745039#reblogged-by-109466236887972400",
+    "published": null,
+    "wmReceived": "2024-08-15T13:07:37Z",
+    "wmId": 1843328,
+    "wmSource": "https://brid.gy/repost/mastodon/@heyjaywilson@iosdev.space/112966141130745039/109466236887972400",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProtocol": "webmention",
+    "repostOf": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProperty": "repost-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Daniel Lyons",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/83512385b74a6cb817bc2ba6a7e387c18232969ea3c69878e5c1279d1082166b.png",
+      "url": "https://iosdev.space/@dandylyons"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966141130745039#favorited-by-109610097732597198",
+    "published": null,
+    "wmReceived": "2024-08-15T13:32:27Z",
+    "wmId": 1843334,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112966141130745039/109610097732597198",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "erin sparling",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/cc11e39f1067d4c43f8ed496ba2c109eabcbae6a780b164380f263009b959bf3.png",
+      "url": "https://mastodon.social/@everyplace"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966141130745039#favorited-by-109354001698567841",
+    "published": null,
+    "wmReceived": "2024-08-15T13:32:28Z",
+    "wmId": 1843335,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/112966141130745039/109354001698567841",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/08/14-null-region-from-camera/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jay :verified_gay:",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/c6d36007eb31c4af584c27a24068cc9319b3f621e8d35f91dc080ffae0a00508.png",
+      "url": "https://iosdev.space/@heyjaywilson"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/112966033706970036",
+    "published": "2024-08-15T12:27:59+00:00",
+    "wmReceived": "2024-08-15T13:33:09Z",
+    "wmId": 1843336,
+    "wmSource": "https://brid.gy/comment/mastodon/@heyjaywilson@iosdev.space/112966010883579520/112966033706970036",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProtocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@mattiem\" class=\"u-url\">@<span>mattiem</span></a></span> i'll file some feedback. i feel like it could do this in the background not when i'm trying to build to the device.</p>",
+      "text": "@mattiem i'll file some feedback. i feel like it could do this in the background not when i'm trying to build to the device."
+    },
+    "inReplyTo": "https://heyjaywilson.com/blog/2024/08/14-why-does-xcode-block/",
+    "wmProperty": "in-reply-to",
+    "wmPrivate": false
+  }
+]
