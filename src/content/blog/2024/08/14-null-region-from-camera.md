@@ -5,7 +5,7 @@ pubDate: Aug 15 2024 07:49
 type: article
 tags: 
   - swift
-  - xcode
+  - swiftui
 ---
 
 Goal to achieve: Get the `MKCoordinateRegion` of the map I'm looking at.
