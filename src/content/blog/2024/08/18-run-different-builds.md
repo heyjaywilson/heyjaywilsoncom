@@ -151,7 +151,7 @@ In Info.plist, I need to add a new entry called `API_HOST_NAME` and reference th
 Now in code, you can access that host name by the following Swift code
 
 ```swift
-guard let hostName = Bundle.main.object(forInfoDictionaryKey: "App_build_number") as? String else {
+guard let hostName = Bundle.main.object(forInfoDictionaryKey: "API_HOST_NAME") as? String else {
   print("🚨 NO HOST NAME SET IN Info.plist")
   return
 }
