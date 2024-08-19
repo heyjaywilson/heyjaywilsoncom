@@ -6,6 +6,7 @@ tags:
   - swift
   - xcode
   - ios-app
+type: article
 ---
 
 Xcode build configuration files, these end in `.xcconfig`, is another place to configure Xcode Build settings. The values set in here can be referenced in the project file. This article is going to show you how to set that up by configuring different bundle IDs and app icons. I'll also show how to access these values in code so that you can use it to define different API endpoints.
