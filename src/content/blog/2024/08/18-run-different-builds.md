@@ -19,8 +19,8 @@ These files are text files that can be used to set your configurations (Debug an
 
 The file is basically a bunch of keys (variable names) and values that will align to build settings. If you choose a key of a build setting, like `PRODUCT_BUNDLE_IDENTIFIER` it will overwrite that value in the Target settings since that value is looking for that build setting. 
 
->[!TIP] 
-You can know if a parameter in Build Settings is looking for a key because it's value will look like this `$(SOME_VALUE)`.
+><!--[!TIP] -->
+> You can know if a parameter in Build Settings is looking for a key because it's value will look like this `$(SOME_VALUE)`.
 
 ## How to add a configuration file
 
