@@ -43,5 +43,5 @@ I don't think I will and that's okay. I'll keep working and trying to though and
 
 ## Previous Dev Logs for FindRelief
 
-- [Log 1](../08/13-ship-a-ton.md)
-- [Log 2](../08/16-ship-a-ton-log-2.md)
+- [Log 1](/blog/2024/08/13-ship-a-ton)
+- [Log 2](/blog/2024/08/16-ship-a-ton-log-2)

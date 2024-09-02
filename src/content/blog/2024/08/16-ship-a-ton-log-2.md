@@ -14,7 +14,7 @@ tags:
   - ship-a-ton
 ---
 
-## What I accomplished since [Log 1](./13-ship-a-ton.md)
+## What I accomplished since [Log 1](13-ship-a-ton)
 
 - Setup dev vs prod builds using XCConfig files, which I wrote a [blog post](https://heyjaywilson.com/blog/2024/08/18-run-different-builds/) for
   ![Screen shot of both production and dev icons from the simulator](https://share.heyjay.lol/grcTztNoQgy8.png)
