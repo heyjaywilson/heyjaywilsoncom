@@ -20,7 +20,7 @@ layout: layouts/base.html
       <span class="font-mono">Last updated: {{ updatedDate | niceDate }}</span>
     </div>
   </header>
-  {% unless tags contains 'article' or overrideNote == true %}
+  {% if tags contains 'article' or overrideNote == true %}
     {% if showAffiliateDisclaimer == true %}
       <div
         class="bg-slate-100 border-slate-400 border-2 m-2 p-2 rounded-md lg:flex lg:gap-2 lg:align-middle lg:items-center"
@@ -34,7 +34,7 @@ layout: layouts/base.html
       </div>
     {% endif %}
     {{ content }}
-  {% endunless %}
+  {% endif %}
   <footer>
     {% if showBuyCoffee %}
       <div class="text-center flex flex-col items-center my-8">
