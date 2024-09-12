@@ -36,5 +36,24 @@
     "repostOf": "https://heyjaywilson.com/blog/2024/09/12-hummingbird-v2/",
     "wmProperty": "repost-of",
     "wmPrivate": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Matt Massicotte",
+      "photo": "https://webmention.io/avatar/cdn.masto.host/9a9a28c2a1ec8b7d072dd1cea05116a7917c4236e401a08e79209824407d2c77.jpg",
+      "url": "https://mastodon.social/@mattiem"
+    },
+    "url": "https://iosdev.space/@heyjaywilson/113124822770296311#favorited-by-109301942677841928",
+    "published": null,
+    "wmReceived": "2024-09-12T20:26:14Z",
+    "wmId": 1847023,
+    "wmSource": "https://brid.gy/like/mastodon/@heyjaywilson@iosdev.space/113124822770296311/109301942677841928",
+    "wmTarget": "https://heyjaywilson.com/blog/2024/09/12-hummingbird-v2/",
+    "wmProtocol": "webmention",
+    "likeOf": "https://heyjaywilson.com/blog/2024/09/12-hummingbird-v2/",
+    "wmProperty": "like-of",
+    "wmPrivate": false
   }
 ]
